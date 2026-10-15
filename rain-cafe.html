@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Rain Café · Lubbock Breakfast & Lunch</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1f6fae;--blue-d:#154f7e;--teal:#2f7f7a;--wood:#d8b98c;--cream:#f7f3ec;--ink:#1d2730;--muted:#5f6b75;--line:#e3ddd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+.demo{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;position:sticky;top:0;background:rgba(247,243,236,.92);backdrop-filter:blur(8px);z-index:20;border-bottom:1px solid var(--line)}
+.logo{font-family:Quicksand,sans-serif;font-weight:700;font-size:30px;line-height:.9;color:var(--blue);letter-spacing:-.02em}
+.logo small{display:block;font-size:10px;letter-spacing:.45em;color:var(--ink);font-weight:500;margin-left:2px}
+nav a{margin-left:24px;text-decoration:none;font-weight:500;font-size:15px}
+nav a:not(.btn):hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:13px 26px;border-radius:999px;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,111,174,.35);background:var(--blue-d)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:2px solid #fff;backdrop-filter:blur(4px)}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;padding:60px 6vw;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:-5%;background-size:cover;background-position:center;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-2%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,40,64,.88) 0%,rgba(14,40,64,.55) 50%,rgba(14,40,64,.1) 100%)}
+.rain{position:absolute;inset:0;z-index:1;pointer-events:none}
+.drop{position:absolute;top:-60px;width:2px;height:55px;background:linear-gradient(transparent,rgba(255,255,255,.6));animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh)}}
+.hero-text{position:relative;z-index:2;max-width:620px}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.16);padding:6px 14px;border-radius:999px;font-size:13px;margin-bottom:20px;animation:up .8s both}
+.hero h1{font-family:Quicksand,sans-serif;font-size:clamp(42px,6.4vw,76px);line-height:1.02;margin-bottom:20px;animation:up .8s .15s both}
+.hero h1 em{font-style:normal;color:#8fd0ff}
+.hero p{font-size:18px;opacity:.92;max-width:500px;margin-bottom:30px;animation:up .8s .3s both}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;animation:up .8s .45s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.rating{position:absolute;right:6vw;bottom:8%;z-index:2;background:#fff;color:var(--ink);border-radius:18px;padding:14px 20px;box-shadow:0 14px 30px rgba(0,0,0,.25);animation:pop .8s 1s both}
+.rating b{font-size:26px;color:var(--blue);display:block;line-height:1.1}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+
+section{padding:80px 6vw}
+h2{font-family:Quicksand,sans-serif;font-size:clamp(28px,4vw,44px);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:40px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.item{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+.item:hover{transform:translateY(-8px);box-shadow:0 22px 40px rgba(20,50,80,.15)}
+.item .ph{height:190px;overflow:hidden}
+.item .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.item:hover .ph img{transform:scale(1.1)}
+.item .tx{padding:20px 22px 24px}
+.item h3{font-size:18px;margin-bottom:4px}
+.item p{color:var(--muted);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:var(--teal);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+
+.story{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;background:#fff}
+.stack{position:relative;height:420px}
+.stack img{position:absolute;border-radius:20px;object-fit:cover;box-shadow:0 20px 40px rgba(0,0,0,.15);transition:transform .5s}
+.stack .a{width:70%;height:75%;top:0;left:0}
+.stack .b{width:55%;height:55%;bottom:0;right:0;border:6px solid #fff}
+.stack:hover .a{transform:rotate(-2deg)}.stack:hover .b{transform:rotate(3deg) scale(1.03)}
+.checks li{list-style:none;padding:10px 0;display:flex;gap:12px;align-items:center}
+.checks li::before{content:"✓";width:26px;height:26px;border-radius:50%;background:#e1eef8;color:var(--blue);display:grid;place-items:center;font-weight:700;flex:none}
+
+.reviews{background:var(--blue);color:#fff}
+.reviews .sub{color:#cfe4f5}
+.carousel{position:relative;min-height:160px}
+.quote{position:absolute;inset:0;font-family:Quicksand,sans-serif;font-weight:700;font-size:clamp(22px,3vw,34px);line-height:1.3;opacity:0;transform:translateY(20px);transition:all .7s}
+.quote.on{opacity:1;transform:none}
+.quote small{display:block;font-family:Inter;font-weight:400;font-size:14px;color:#cfe4f5;margin-top:14px}
+.dots{display:flex;gap:8px;margin-top:24px}
+.dots span{width:10px;height:10px;border-radius:6px;background:rgba(255,255,255,.35);transition:all .3s}
+.dots span.on{background:#fff;width:28px}
+
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.info div{margin-bottom:18px}
+.info b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.open{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.open i{width:10px;height:10px;border-radius:50%;background:#2fa65a;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,166,90,.6)}70%{box-shadow:0 0 0 10px rgba(47,166,90,0)}100%{box-shadow:0 0 0 0 rgba(47,166,90,0)}}
+.front{border-radius:20px;overflow:hidden;margin-top:10px}
+.front img{width:100%;height:220px;object-fit:cover}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:460px;border:0}
+footer{padding:30px 6vw;color:var(--muted);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.float-call{position:fixed;right:18px;bottom:18px;z-index:30;background:var(--blue);color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25);text-decoration:none;font-size:24px;animation:ring 3s 2s infinite}
+@keyframes ring{0%,90%,100%{transform:rotate(0)}92%{transform:rotate(-14deg)}94%{transform:rotate(14deg)}96%{transform:rotate(-8deg)}98%{transform:rotate(8deg)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){.story,.visit{grid-template-columns:1fr}.rating{display:none}nav a:not(.btn){display:none}.stack{height:320px}.map iframe{height:300px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Rain Café website</div>
+
+<header>
+  <div class="logo">rain<small>CAFÉ</small></div>
+  <nav><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a><a class="btn" href="https://ohbz.com" style="padding:9px 20px;margin-left:24px">Order online</a></nav>
+</header>
+
+<div class="hero">
+  <div class="bg" data-img="0"></div>
+  <div class="rain" id="rain"></div>
+  <div class="hero-text">
+    <span class="eyebrow">☔ Homestyle breakfast &amp; lunch · Lubbock, TX</span>
+    <h1>Rain or shine,<br>breakfast is <em>on.</em></h1>
+    <p>Our famous crusted French toast, fluffy pancakes and big plates made the way Lubbock likes them. Come hungry.</p>
+    <div class="ctas"><a class="btn" href="https://ohbz.com">Order online</a><a class="btn ghost" href="#menu">See the menu</a></div>
+  </div>
+  <div class="rating"><b>4.4 ★</b>1,000+ Google reviews</div>
+</div>
+
+<section id="menu">
+  <h2 class="reveal">Guest favorites</h2>
+  <p class="sub reveal">The plates our regulars come back for, again and again.</p>
+  <div class="menu">
+    <div class="item reveal"><div class="ph"><img data-img="2" alt="Crusted French toast"></div><div class="tx"><span class="tag">#1 pick</span><h3>Crusted French Toast</h3><p>Our signature, with fresh fruit and your choice of meat.</p></div></div>
+    <div class="item reveal"><div class="ph"><img data-img="3" alt="Pancakes"></div><div class="tx"><span class="tag">Classic</span><h3>Buttermilk Pancakes</h3><p>Golden, fluffy and served with warm syrup.</p></div></div>
+    <div class="item reveal"><div class="ph"><img data-img="4" alt="Omelette"></div><div class="tx"><span class="tag">Hearty</span><h3>Omelettes &amp; Sausage</h3><p>Fluffy eggs, sausage patties and house salsa.</p></div></div>
+    <div class="item reveal"><div class="ph"><img data-img="5" alt="Chicken and waffles"></div><div class="tx"><span class="tag">Fan favorite</span><h3>Chicken &amp; Waffles</h3><p>Crispy chicken on a golden waffle.</p></div></div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="stack reveal"><img class="a" data-img="6" alt="Inside Rain Café"><img class="b" data-img="0" alt="French toast"></div>
+  <div class="reveal">
+    <h2>Big plates, friendly faces</h2>
+    <p class="sub" style="margin-bottom:20px">A bright, comfortable dining room where the coffee keeps coming and the servers know your name.</p>
+    <ul class="checks"><li>Dine in, take away or delivery</li><li>Breakfast served all day until 3 pm</li><li>Generous portions at fair prices</li><li>Easy order online for pickup</li></ul>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <h2 class="reveal">What Lubbock says</h2>
+  <p class="sub reveal">4.4 stars from over 1,000 Google reviews.</p>
+  <div class="carousel">
+    <div class="quote on">"Great experience, great customer service, great food, and good prices."<small>Google review</small></div>
+    <div class="quote">"There's nothing like that crusted French toast. Highly recommend!"<small>Google review</small></div>
+    <div class="quote">"Great price, super friendly staff, nothing fancy, but great taste!"<small>Google review</small></div>
+  </div>
+  <div class="dots"><span class="on"></span><span></span><span></span></div>
+</section>
+
+<section id="visit">
+  <h2 class="reveal">Come visit</h2>
+  <p class="sub reveal">Look for the blue sign on 50th Street.</p>
+  <div class="visit">
+    <div class="info reveal">
+      <div><b>Today</b><span class="open"><i></i>Serving breakfast &amp; lunch until 3 pm</span></div>
+      <div><b>Address</b>2708 50th St, Lubbock, TX 79413</div>
+      <div><b>Phone</b><a href="tel:+18067855800">(806) 785-5800</a></div>
+      <a class="btn" href="https://maps.google.com/?q=Rain+Cafe+2708+50th+St+Lubbock+TX">Get directions</a>
+      <div class="front"><img data-img="1" alt="Rain Café storefront"></div>
+    </div>
+    <div class="map reveal"><iframe loading="lazy" src="https://maps.google.com/maps?q=Rain%20Cafe%202708%2050th%20St%20Lubbock%20TX&output=embed" title="Map"></iframe></div>
+  </div>
+</section>
+
+<footer><span>© Rain Café · Lubbock, Texas · Photos from Google Maps</span><span>Demo design by aditya-chaturvedi.vercel.app</span></footer>
+<a class="float-call" href="tel:+18067855800" aria-label="Call Rain Café">📞</a>
+
+<script>
+const IMG=["ANWiy9TtVIeQlaH6nPhcVTO7VWYZO4b-Mdbv-rLOHj_6qAJreNTYwKGcllQnJuEp3KE9Ueizcxqxvo9LEUeorE3KOFNLsyCyO1vJlg1uUVo9l6TpY7jAapKSIfCeYHelclIjr5DDo0ZdnCEKcS5F","ANWiy9Qzjsyk2jebYChB4ldP31Sn9wQICCpzOPj9s57HL-XCmCzun0cI2Q8ALAGmP2MGy1NrxF0fgv-iZlv6JoApum1o-Y3L951UX4Da5knY6u9kzijMA3vZE5DN1hKdd2bJMgxaSLy7vkTYkT8","ANWiy9REhpfWh8Hs2tJQJUA36qkdDQeaDGpkXVrf7uI8ZNg7ZxtT9WdTlakJKrH34Xjt293mM3ZU5Aqc3il73T2vPQKXMDzpHZrLVLJruSRaRilavdf1ia0uKFG1Es8vnWBSZcFuHr2f7iFxCwL8","ANWiy9R9ryeBIo1o6gtpiCSbT5G2JGZN3RkVopdxNkwW2Limo5DHY0eDboJeu7CJt8XbipL0fnaV9O2G9WLi9HrO2K3AuLIE1MTLfEEALF85V-1jVop3ZmiySlaQGYAMsH154xOz1-90NQc9tKY","ANWiy9SIxS6yFMelYx7XUZzN6ddS4cNNl7ACXuGKjjHMNzKf2OyXws2QkUdV0A5s3siUWhk0-VRKCBiMmOVYDZXDQTc7qOyKQOdXfs-McW7t4FXSDySFAA14Xf9prDgjLjfyUidIGhMsNCJmb2ST","ANWiy9QiZG4a-soxbRp9QhEpt3gHPP6rtxfzpVykIxYWGw292jZQNMI61RWn0Rte53xqlsMlM44aIChSv8rgSW3oQvpKdWZBs-iR81nZToCX28dEnZDETyEa9YmtpmiAXvkBlRIjOqUIHSyqM44","ANWiy9QhKHfVyOdxVOfR1vPbeJ7SDsP9lezHEyZan3LiAaI1j9m2AccpKMhISUUGex8RUKaf6wGnBVQiUlTnGwegiBWtSBUpXiY-ifEwpciVeXlvmMGnv9tBdNSAL--9z2XjKpwsx_Ytv498Y-Xl"];
+const src=(i,w=1200,h=800)=>`https://lh3.googleusercontent.com/gps-cs-s/${IMG[i]}=w${w}-h${h}-k-no`;
+document.querySelectorAll('img[data-img]').forEach(el=>{el.src=src(+el.dataset.img,800,600);el.loading='lazy'});
+document.querySelectorAll('.bg[data-img]').forEach(el=>el.style.backgroundImage=`url(${src(+el.dataset.img,1800,1200)})`);
+const rain=document.getElementById('rain');
+for(let i=0;i<60;i++){const d=document.createElement('span');d.className='drop';d.style.left=Math.random()*100+'%';d.style.animationDuration=(.6+Math.random()*.7)+'s';d.style.animationDelay=(-Math.random()*2)+'s';d.style.opacity=.25+Math.random()*.5;rain.appendChild(d)}
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*90);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const qs=document.querySelectorAll('.quote'),ds=document.querySelectorAll('.dots span');let q=0;
+setInterval(()=>{qs[q].classList.remove('on');ds[q].classList.remove('on');q=(q+1)%qs.length;qs[q].classList.add('on');ds[q].classList.add('on')},4000);
+</script>
+</body>
+</html>
