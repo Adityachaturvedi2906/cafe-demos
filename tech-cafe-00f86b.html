@@ -2,28 +2,173 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
 <title>Tech Cafe · Lubbock</title>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/base.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff8ee;--ink:#1f1a17;--a1:#d7261e;--a2:#111111;--soft:#f5e9d6;--f1:'Lobster',serif;--f2:'Inter',system-ui,sans-serif;--line:rgba(0,0,0,.1);--muted:rgba(0,0,0,.6);--hdr:rgba(255,255,255,.88);--eyebg:rgba(255,255,255,.7)}
-.hero{position:relative;min-height:88vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:70px 6vw;overflow:hidden;background:linear-gradient(100deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.85) 42%,rgba(255,255,255,.35) 75%,rgba(255,255,255,.1)),url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RLVUMs2Syhmkm8PoBP_4EUFeKS_vArCEdptYVhar_3naQpXXIKsZk_flNN3-Y-q48rQK-QtsGsTPsVyNNNkxwhflXRZFEsgywxVv1PXD9YIqJdWXLrZ_0tbxp3KADLRv3sb8SUbLisah7G=w1800-h1200-k-no) center/cover;color:var(--ink)}
-.opensign{font-family:var(--f1);font-size:84px;color:#fff;padding:10px 34px;border:6px solid #fff;border-radius:18px;text-shadow:0 0 10px var(--a1),0 0 30px var(--a1);box-shadow:0 0 18px var(--a1),inset 0 0 18px var(--a1);animation:flick 3s infinite;transform:rotate(-6deg)}@keyframes flick{0%,40%,44%,100%{opacity:1}42%{opacity:.35}}.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:34px;background:conic-gradient(#111 25%,#fff 0 50%,#111 0 75%,#fff 0) 0 0/34px 34px;animation:check 3s linear infinite;z-index:2}@keyframes check{to{background-position:68px 0}}
+:root{--cream:#fff8ee;--paper:#fffdf8;--ink:#1f1a17;--red:#d7261e;--red2:#a91a14;--black:#111;--mint:#7fd1c7;--muted:rgba(31,26,23,.62);--line:rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--black);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+.status{background:var(--red);color:#fff;text-align:center;font-size:14px;font-weight:600;padding:8px 12px;display:flex;justify-content:center;align-items:center;gap:10px}
+.status i{width:9px;height:9px;border-radius:50%;background:#fff;opacity:.5}.status.o i{opacity:1;animation:bl 1.2s infinite}@keyframes bl{50%{opacity:.2}}
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,248,238,.92);backdrop-filter:blur(8px);border-bottom:3px solid var(--black)}
+.logo{font-family:'Lobster',cursive;font-size:34px;color:var(--red);line-height:1}
+nav a{margin-left:24px;font-weight:600;font-size:14.5px}nav a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:13px 26px;border-radius:10px;box-shadow:0 5px 0 var(--red2);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--red2)}.btn:active{transform:translateY(5px);box-shadow:none}
+.btn.dk{background:var(--black);box-shadow:0 5px 0 #444}
+.hero{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:60px 5vw 100px;overflow:hidden}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:34px;background:conic-gradient(#111 25%,#fff 0 50%,#111 0 75%,#fff 0) 0 0/34px 34px;animation:ck 4s linear infinite}@keyframes ck{to{background-position:68px 0}}
+.neon{display:inline-block;font-family:'Lobster',cursive;font-size:30px;color:#fff;background:#1a1a1a;padding:6px 22px;border-radius:12px;text-shadow:0 0 6px var(--red),0 0 18px var(--red);box-shadow:inset 0 0 0 3px var(--red),0 0 18px rgba(215,38,30,.5);animation:fl 4s infinite}
+@keyframes fl{0%,46%,50%,100%{opacity:1}48%{opacity:.4}}
+.neon.off{text-shadow:none;color:#777;box-shadow:inset 0 0 0 3px #555;animation:none}
+.hero h1{font-family:'Lobster',cursive;font-weight:400;font-size:clamp(52px,7vw,96px);line-height:1.02;margin:20px 0}
+.hero h1 span{color:var(--red);display:inline-block;animation:wig 3s ease-in-out infinite;transform-origin:left bottom}@keyframes wig{50%{transform:rotate(-2deg)}}
+.hero p{font-size:18px;color:var(--muted);max-width:500px}
+.ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.bdg{background:#fff;border:2px solid var(--black);border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px}.bdg b{color:var(--red)}
+.plate{position:relative;aspect-ratio:1;max-width:520px;justify-self:center;width:100%}
+.plate .rim{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#fff 60%,#f1ebe1 61%,#fff 66%,#e9e1d4 100%);box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.plate img{position:absolute;inset:11%;width:78%;height:78%;border-radius:50%;object-fit:cover;background:#eadfcd;animation:turn 40s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+.sticker{position:absolute;right:-2%;top:6%;width:120px;height:120px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:15px;line-height:1.15;transform:rotate(12deg);box-shadow:0 10px 24px rgba(215,38,30,.35);animation:bob 3s ease-in-out infinite}
+.sticker small{display:block;font-size:11px;font-weight:600;opacity:.9}@keyframes bob{50%{transform:rotate(4deg) translateY(-8px)}}
+.fork{position:absolute;left:-6%;bottom:8%;font-size:56px;animation:bob 3.4s ease-in-out infinite reverse}
+section{padding:96px 5vw}
+.h2{font-family:'Lobster',cursive;font-weight:400;font-size:clamp(42px,5vw,64px);line-height:1.05}.h2 span{color:var(--red)}
+.lead{color:var(--muted);margin-top:8px}
+.menu{background:var(--paper);border:3px solid var(--black);border-radius:22px;padding:44px;margin-top:36px;box-shadow:10px 10px 0 var(--black);position:relative}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.tab{font:700 15px 'Inter',sans-serif;padding:11px 22px;border-radius:999px;border:2px solid var(--black);background:#fff;cursor:pointer;transition:.2s}
+.tab.on{background:var(--black);color:#fff}.tab:hover:not(.on){background:var(--cream)}
+.pane{display:none;grid-template-columns:1fr 1fr;gap:4px 50px}.pane.on{display:grid;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.mi{display:flex;align-items:baseline;gap:10px;padding:16px 0;border-bottom:2px dotted rgba(0,0,0,.18)}
+.mi h3{font-size:18px;font-weight:700;white-space:nowrap}.mi p{color:var(--muted);font-size:14.5px}
+.mi .dot{flex:1;border-bottom:2px dotted rgba(0,0,0,.25);transform:translateY(-4px);min-width:20px}
+.mi .ic{font-size:22px}
+.mnote{margin-top:24px;font-size:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.mnote b{color:var(--red)}
+.pod{display:grid;grid-template-columns:1.15fr .85fr;gap:0;background:var(--black);color:#fff;border-radius:26px;overflow:hidden;margin:0 5vw}
+.slides{position:relative;min-height:440px;background:#222}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1s,transform 5s}
+.slides img.on{opacity:1;transform:scale(1)}
+.podt{padding:50px 44px;display:flex;flex-direction:column;justify-content:center}
+.podt .k{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mint)}
+.podt h3{font-family:'Lobster',cursive;font-weight:400;font-size:46px;margin:10px 0;line-height:1.05;min-height:2.1em}
+.podt p{color:rgba(255,255,255,.7)}
+.pdots{display:flex;gap:8px;margin-top:26px}.pdots button{width:12px;height:12px;border-radius:50%;border:0;background:rgba(255,255,255,.3);cursor:pointer}.pdots button.on{background:var(--red);width:30px;border-radius:6px}
+.crew{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.tick{background:#fff;border-radius:6px;padding:34px 34px 30px;box-shadow:0 18px 40px rgba(0,0,0,.1);position:relative;transform:rotate(-1.5deg);border-top:10px solid var(--red)}
+.tick::after{content:'';position:absolute;left:0;right:0;bottom:-12px;height:12px;background:radial-gradient(circle at 8px 0,transparent 8px,#fff 8.5px) 0 0/16px 12px}
+.tick .h{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:12px;margin-bottom:16px}
+.tick p{font-size:19px;font-weight:500}.tick small{display:block;margin-top:14px;color:var(--red);font-weight:700}
+.tick.t2{transform:rotate(1.5deg);margin-top:30px;border-top-color:var(--black)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.f{background:#fff;border:2px solid var(--black);border-radius:16px;padding:20px}.f b{font-size:28px;display:block}.f span{font-weight:700}.f p{font-size:14px;color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;margin-top:36px}
+.card{background:#fff;border:3px solid var(--black);border-radius:20px;padding:32px;box-shadow:8px 8px 0 var(--red)}
+.big{font-family:'Lobster',cursive;font-size:44px;color:var(--red);line-height:1.1}
+.card .li{margin:10px 0;font-size:15.5px}.card .li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border:3px solid var(--black);border-radius:20px;overflow:hidden;min-height:380px}.map iframe{width:100%;height:100%;min-height:380px;border:0}
+footer{background:var(--black);color:rgba(255,255,255,.7);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:28px 5vw;font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:900px){
+nav a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding:40px 16px 90px}.plate{max-width:360px}
+.pane{grid-template-columns:1fr}.menu{padding:26px 18px;box-shadow:6px 6px 0 var(--black)}
+.pod{grid-template-columns:1fr;margin:0 16px}.slides{min-height:300px}.podt{padding:34px 24px}.podt h3{font-size:36px}
+.crew,.visit{grid-template-columns:1fr}section{padding:76px 16px}header{padding:10px 16px}
+.mi h3{white-space:normal}.mi .dot{display:none}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:3px solid var(--black)}
+.mbar a{text-align:center;padding:15px;font-weight:800;background:#fff}.mbar a:first-child{background:var(--red);color:#fff}body{padding-bottom:54px}}
+@media(max-width:480px){nav .btn{display:none}.sticker{width:96px;height:96px;font-size:13px}.feat{grid-template-columns:1fr}}
 </style></head><body>
 <div class="demo">Concept demo by Aditya Chaturvedi · not the official Tech Cafe website</div>
-<header><div class="logo">Tech Cafe</div><nav><a href="#services">On the menu</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a class="btn" href="tel:+18064075351" style="padding:9px 20px;margin-left:22px">Call now</a></nav></header>
+<div class="status" id="status"><i></i><span>Open every day 6am – 4pm</span></div>
+<header><a class="logo" href="#">Tech Cafe</a><nav><a href="#menu">Menu</a><a href="#today">Today</a><a href="#visit">Visit</a><a class="btn" style="padding:9px 20px;margin-left:22px" href="tel:+18064075351">Call now</a></nav></header>
+
 <div class="hero">
- <div class="txt"><span class="eyebrow">Breakfast &amp; lunch · Every day 6am–4pm</span><h1>Good food,<br><em>fast &amp; friendly.</em></h1><p>Chicken fried steak, fluffy pancakes, crispy fries and daily specials, served by the friendliest crew on Milwaukee Ave.</p>
-  <div class="ctas"><a class="btn" href="tel:+18064075351">Call 806-407-5351</a><a class="btn alt" href="#visit">Get directions</a></div>
-  <div class="rate"><b>4.7★</b> from 236 Google reviews</div></div>
- <div class="deco"><div class="opensign">OPEN</div></div>
+ <div><span class="neon" id="neon">Open</span>
+  <h1>Good food,<br><span>fast &amp; friendly.</span></h1>
+  <p>Chicken fried steak, fluffy pancakes, crispy fries and daily specials, served by the friendliest crew on Milwaukee Ave.</p>
+  <div class="ctas"><a class="btn" href="#menu">See the menu</a><a class="btn dk" href="tel:+18064075351">Call 806-407-5351</a></div>
+  <div class="badges"><span class="bdg"><b>4.7★</b> 236 Google reviews</span><span class="bdg">Breakfast &amp; lunch</span><span class="bdg">7 days a week</span></div></div>
+ <div class="plate"><div class="rim"></div><img data-g="ANWiy9QIoLEe4724GlkoHXPCmU4TPutQuVDl1_Y7etrTyyKbT-ro31RfByNT_HnAoFYdQSInVRZQZEU4cy1ff1udfujxnP-bXfNAynS01QLoSnvcVlw3a0GgEFJJ_i3UdSWL-9kybpXxrcDc1eNy" alt="Pancakes at Tech Cafe">
+  <div class="sticker"><div>Daily<br>specials<small>ask your server</small></div></div><div class="fork">🍴</div></div>
 </div>
-<section id="services"><h2 class="reveal">On the menu</h2><p class="sub reveal">Big plates, fair prices, made fresh.</p><div class="items"><div class="item reveal"><span class="num">01</span><h3>Pancake Stack</h3><p>Golden, fluffy and big enough to share.</p></div><div class="item reveal"><span class="num">02</span><h3>Chicken Fried Steak</h3><p>A Texas classic, smothered in gravy.</p></div><div class="item reveal"><span class="num">03</span><h3>Burgers &amp; Fries</h3><p>Hot off the grill, crispy fries on the side.</p></div><div class="item reveal"><span class="num">04</span><h3>Daily Specials</h3><p>Ask your server what's cooking today.</p></div></div></section>
-<section id="gallery"><h2 class="reveal">Take a look inside</h2><p class="sub reveal">Real photos from Tech Cafe.</p><div class="gal"><figure class="reveal"><img loading="lazy" data-src="ANWiy9QIoLEe4724GlkoHXPCmU4TPutQuVDl1_Y7etrTyyKbT-ro31RfByNT_HnAoFYdQSInVRZQZEU4cy1ff1udfujxnP-bXfNAynS01QLoSnvcVlw3a0GgEFJJ_i3UdSWL-9kybpXxrcDc1eNy" alt="Golden pancakes"><figcaption>Golden pancakes</figcaption></figure><figure class="reveal"><img loading="lazy" data-src="ANWiy9R_3ZYnuXktL1alOtZe2v0Q2UcMAZm9PsMywnBQgNEWv5bqR0AW0cUENtyIHCtJWbeZW6PzNfFNYqNa1RTk_qQFjP_UwzgMKZvgSfjTArrtFv4i2v68oXA_r5YllZyNxDJPeh1VBGe8QE3i" alt="Crispy &amp; fresh"><figcaption>Crispy &amp; fresh</figcaption></figure><figure class="reveal"><img loading="lazy" data-src="ANWiy9QosecnF-62In2rNdurli8_RwqrZv5jTnQZY1_t3aVBrd-gQiWwIz09qOzVBC-lIosB0r6wnygz65svCceIfgoHP7kkGiuuvbAotSxFVK3XEoo_Ws5k6-2GGO2cp1yk4MdpUtqYTQscOxE" alt="Lunch plates"><figcaption>Lunch plates</figcaption></figure><figure class="reveal"><img loading="lazy" data-src="ANWiy9QGnbW8GEF9kwpy_tYMBsE4KNho5yRG6z0wF1b48QO6xU4bZoPgEbUD88nS9WgGO3L2b4KEkaYQVc6Ne-F1i_fdOnbmhnUO6ifDm5KpDqd9heAwsmpdDI3Gq-1_KfGjDv0WzbxL9Q" alt="Breakfast classics"><figcaption>Breakfast classics</figcaption></figure><figure class="reveal"><img loading="lazy" data-src="ANWiy9SKrSfd9cE6MuCP-IsVPt_X-Xj58GqzYT-XVsM3Gi6ouEmYQ9u7SE9DBw3hcRHuR-3a88KS656JjvsML2np0Clh_56YTzFoDTlIN_nxKvXfOQSCHxL6daClbgp4Uqf_VcufMZ2sqAMv-Nmh" alt="Daily specials"><figcaption>Daily specials</figcaption></figure></div></section>
-<section class="reviews"><h2 class="reveal">What people say</h2><p class="sub reveal">Rated 4.7 stars from 236 Google reviews.</p><div class="car"><div class="q on">“Excellent fresh and quick food, top-notch service, friendly and helpful staff. Flexible with substitutions and great daily specials.”<small>Google review · 4.7★</small></div><div class="q">“The staff was attentive. Our waitress Bernice was friendly and helpful.”<small>Google review · 4.7★</small></div></div><div class="dots"><span class=on></span><span></span></div></section>
-<section id="visit"><h2 class="reveal">Come visit</h2><p class="sub reveal">We'd love to see you.</p><div class="visit">
- <div class="info reveal"><div><b>Hours</b><span class="open"><i></i>Open every day · 6am–4pm</span></div><div><b>Address</b>6810 Milwaukee Ave Ste 100, Lubbock, TX 79424</div><div><b>Phone</b><a href="tel:+18064075351">+1 806-407-5351</a></div>
- <a class="btn" href="https://maps.google.com/?q=Tech%20Cafe%206810%20Milwaukee%20Ave%20Ste%20100%2C%20Lubbock%2C%20TX%2079424">Get directions</a></div>
- <div class="map reveal"><iframe loading="lazy" src="https://maps.google.com/maps?q=Tech%20Cafe%206810%20Milwaukee%20Ave%20Ste%20100%2C%20Lubbock%2C%20TX%2079424&output=embed" title="Map"></iframe></div></div></section>
+
+<section id="menu">
+ <h2 class="h2 reveal">What's <span>cooking</span></h2><p class="lead reveal">Diner favorites, made fresh. Substitutions are always welcome.</p>
+ <div class="menu reveal">
+  <div class="tabs"><button class="tab on" data-t="b">☀️ Breakfast</button><button class="tab" data-t="l">🍔 Lunch</button><button class="tab" data-t="s">⭐ Specials</button></div>
+  <div class="pane on" id="p-b">
+   <div class="mi"><span class="ic">🥞</span><div><h3>Pancake Stack</h3><p>Golden, fluffy and big enough to share.</p></div></div>
+   <div class="mi"><span class="ic">🍳</span><div><h3>Eggs Your Way</h3><p>With your choice of sides.</p></div></div>
+   <div class="mi"><span class="ic">🥓</span><div><h3>Breakfast Plates</h3><p>The classic morning combo.</p></div></div>
+   <div class="mi"><span class="ic">☕</span><div><h3>Hot Coffee</h3><p>Poured fresh and kept coming.</p></div></div>
+  </div>
+  <div class="pane" id="p-l">
+   <div class="mi"><span class="ic">🥩</span><div><h3>Chicken Fried Steak</h3><p>A Texas classic, smothered in gravy.</p></div></div>
+   <div class="mi"><span class="ic">🍔</span><div><h3>Burgers</h3><p>Hot off the grill.</p></div></div>
+   <div class="mi"><span class="ic">🍟</span><div><h3>Crispy Fries</h3><p>Golden and crunchy, every time.</p></div></div>
+   <div class="mi"><span class="ic">🥗</span><div><h3>Lunch Plates</h3><p>Hearty plates for a midday break.</p></div></div>
+  </div>
+  <div class="pane" id="p-s">
+   <div class="mi"><span class="ic">⭐</span><div><h3>Today's Special</h3><p>Changes daily. Ask your server what's cooking.</p></div></div>
+   <div class="mi"><span class="ic">🔄</span><div><h3>Make It Yours</h3><p>Flexible with substitutions.</p></div></div>
+  </div>
+  <div class="mnote"><span>Sample menu for this demo · <b>prices at the counter</b></span><span>Dine in · Call ahead 806-407-5351</span></div>
+ </div>
+</section>
+
+<div class="pod reveal" id="today">
+ <div class="slides" id="slides">
+  <img class="on" data-g="ANWiy9QIoLEe4724GlkoHXPCmU4TPutQuVDl1_Y7etrTyyKbT-ro31RfByNT_HnAoFYdQSInVRZQZEU4cy1ff1udfujxnP-bXfNAynS01QLoSnvcVlw3a0GgEFJJ_i3UdSWL-9kybpXxrcDc1eNy" data-w="1200" alt="Pancakes">
+  <img data-g="ANWiy9R_3ZYnuXktL1alOtZe2v0Q2UcMAZm9PsMywnBQgNEWv5bqR0AW0cUENtyIHCtJWbeZW6PzNfFNYqNa1RTk_qQFjP_UwzgMKZvgSfjTArrtFv4i2v68oXA_r5YllZyNxDJPeh1VBGe8QE3i" data-w="1200" alt="Crispy plate">
+  <img data-g="ANWiy9QosecnF-62In2rNdurli8_RwqrZv5jTnQZY1_t3aVBrd-gQiWwIz09qOzVBC-lIosB0r6wnygz65svCceIfgoHP7kkGiuuvbAotSxFVK3XEoo_Ws5k6-2GGO2cp1yk4MdpUtqYTQscOxE" data-w="1200" alt="Lunch plate">
+  <img data-g="ANWiy9QGnbW8GEF9kwpy_tYMBsE4KNho5yRG6z0wF1b48QO6xU4bZoPgEbUD88nS9WgGO3L2b4KEkaYQVc6Ne-F1i_fdOnbmhnUO6ifDm5KpDqd9heAwsmpdDI3Gq-1_KfGjDv0WzbxL9Q" data-w="1200" alt="Breakfast">
+  <img data-g="ANWiy9SKrSfd9cE6MuCP-IsVPt_X-Xj58GqzYT-XVsM3Gi6ouEmYQ9u7SE9DBw3hcRHuR-3a88KS656JjvsML2np0Clh_56YTzFoDTlIN_nxKvXfOQSCHxL6daClbgp4Uqf_VcufMZ2sqAMv-Nmh" data-w="1200" alt="Special">
+  <img data-g="ANWiy9RLVUMs2Syhmkm8PoBP_4EUFeKS_vArCEdptYVhar_3naQpXXIKsZk_flNN3-Y-q48rQK-QtsGsTPsVyNNNkxwhflXRZFEsgywxVv1PXD9YIqJdWXLrZ_0tbxp3KADLRv3sb8SUbLisah7G" data-w="1200" alt="Tech Cafe">
+ </div>
+ <div class="podt"><span class="k">Fresh off the griddle</span><h3 id="pt">Golden pancakes</h3><p id="pp">Real plates from the Tech Cafe kitchen, photographed by guests.</p><div class="pdots" id="pdots"></div></div>
+</div>
+
+<section>
+ <div class="crew">
+  <div><h2 class="h2 reveal">The <span>crew</span> makes it</h2><p class="lead reveal">Guests keep coming back for the food, and for the people serving it.</p>
+   <div class="feat"><div class="f reveal"><b>⚡</b><span>Quick service</span><p>Fresh food without the long wait.</p></div><div class="f reveal"><b>😊</b><span>Friendly staff</span><p>Attentive, helpful and welcoming.</p></div></div></div>
+  <div>
+   <div class="tick reveal"><div class="h"><span>GUEST CHECK</span><span>★★★★★</span></div><p>“Excellent fresh and quick food, top-notch service, friendly and helpful staff. Flexible with substitutions and great daily specials.”</p><small>Google review</small></div>
+   <div class="tick t2 reveal"><div class="h"><span>SHOUT-OUT</span><span>★★★★★</span></div><p>“The staff was attentive. Our waitress Bernice was friendly and helpful.”</p><small>Google review</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Come <span>hungry</span></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="big">6am – 4pm</div><p style="font-weight:700">Every single day</p>
+   <div class="li"><b>Address</b>6810 Milwaukee Ave Ste 100, Lubbock, TX 79424</div>
+   <div class="li"><b>Phone</b><a href="tel:+18064075351">+1 806-407-5351</a></div>
+   <div class="ctas"><a class="btn" href="tel:+18064075351">Call now</a><a class="btn dk" href="https://maps.google.com/?q=Tech%20Cafe%206810%20Milwaukee%20Ave%20Ste%20100%2C%20Lubbock%2C%20TX%2079424">Directions</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" src="https://maps.google.com/maps?q=Tech%20Cafe%206810%20Milwaukee%20Ave%20Ste%20100%2C%20Lubbock%2C%20TX%2079424&output=embed" title="Map"></iframe></div>
+ </div>
+</section>
+
 <footer><span>© Tech Cafe · Lubbock</span><span>Designed by Aditya Chaturvedi</span></footer>
-<a class="fcall" href="tel:+18064075351" aria-label="Call">📞</a><div class="lb" id="lb"><img alt=""></div>
-<script src="/base.js"></script></body></html>
+<div class="mbar"><a href="tel:+18064075351">Call</a><a href="https://maps.google.com/?q=Tech%20Cafe%206810%20Milwaukee%20Ave%20Ste%20100%2C%20Lubbock%2C%20TX%2079424">Directions</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src='https://lh3.googleusercontent.com/gps-cs-s/'+e.dataset.g+'=w'+(e.dataset.w||900)+'-h'+(e.dataset.h||900)+'-k-no'});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+document.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.pane').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('p-'+b.dataset.t).classList.add('on')}});
+var C=[['Golden pancakes','Fluffy stacks that guests rave about.'],['Crispy &amp; fresh','Hot, crunchy and made to order.'],['Lunch plates','Hearty midday plates, served quick.'],['Breakfast classics','The diner morning, done right.'],['Daily specials','Something new every day. Just ask.'],['Pull up a seat','Breakfast and lunch on Milwaukee Ave.']];
+var sl=document.querySelectorAll('#slides img'),pd=document.getElementById('pdots'),cur=0,tm;
+sl.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Photo '+(i+1));b.onclick=function(){go(i);rs()};pd.appendChild(b)});
+function go(i){sl[cur].classList.remove('on');pd.children[cur].classList.remove('on');cur=i;sl[i].classList.add('on');pd.children[i].classList.add('on');document.getElementById('pt').innerHTML=C[i][0];document.getElementById('pp').innerHTML=C[i][1]}
+function rs(){clearInterval(tm);tm=setInterval(function(){go((cur+1)%sl.length)},3800)}go(0);rs();
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})),h=n.getHours()+n.getMinutes()/60,o=h>=6&&h<16,st=document.getElementById('status'),ne=document.getElementById('neon');
+if(o){st.classList.add('o');st.lastChild.textContent='Open now · serving until 4pm today'}else{st.lastChild.textContent='Closed now · back at 6am '+(h<6?'today':'tomorrow');ne.textContent='Closed';ne.classList.add('off')}
+</script></body></html>
