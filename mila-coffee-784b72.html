@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mila Coffee · San Antonio</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f5f0;--ink:#111;--muted:rgba(17,17,17,.62);--line:rgba(17,17,17,.12);--blue:#2f6bff;--red:#e63946}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:500;padding:7px 12px}
+.status{text-align:center;font-weight:600;font-size:13.5px;padding:8px;border-bottom:2px solid var(--ink);background:#fff}
+.status i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#999;margin-right:8px}.status.o i{background:#2bb24c;animation:bl 1.4s infinite}@keyframes bl{50%{opacity:.3}}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(247,245,240,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--ink)}
+.logo{font-family:'Alfa Slab One';font-size:28px;letter-spacing:2px}.logo span{color:var(--red)}
+nav a{margin-left:22px;font-weight:600;font-size:14.5px}nav a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;padding:13px 24px;border-radius:999px;border:2px solid var(--ink);transition:.2s}
+.btn:hover{background:#fff;color:var(--ink)}.btn.w{background:#fff;color:var(--ink)}.btn.w:hover{background:var(--ink);color:#fff}
+.hero{position:relative;min-height:86vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:50px 5vw;overflow:hidden}
+.hero h1{font-family:'Alfa Slab One';font-weight:400;font-size:clamp(50px,7.4vw,104px);line-height:.95}
+.hero h1 .s{font-family:Caveat;color:var(--red);font-size:.6em;display:block;transform:rotate(-4deg);margin:6px 0 0 8px}
+.hero p{font-size:18px;color:var(--muted);max-width:470px;margin:20px 0 26px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hint{font-family:Caveat;font-size:24px;color:var(--muted);margin-top:22px}
+.board{position:relative;height:580px;border:2px dashed var(--line);border-radius:28px;background:radial-gradient(rgba(0,0,0,.05) 1px,transparent 1.5px) 0 0/16px 16px}
+.stk{position:absolute;width:190px;background:#fff;padding:8px 8px 30px;border-radius:6px;box-shadow:0 14px 30px rgba(0,0,0,.18);cursor:grab;touch-action:none;user-select:none;transition:box-shadow .2s}
+.stk:active{cursor:grabbing;box-shadow:0 24px 50px rgba(0,0,0,.28);z-index:20}
+.stk img{width:100%;height:190px;object-fit:cover;border-radius:3px;pointer-events:none}
+.stk b{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:Caveat;font-size:21px}
+.stk.big{width:250px}.stk.big img{height:260px}
+.tape{position:absolute;top:-12px;left:50%;width:70px;height:22px;transform:translateX(-50%) rotate(-4deg);background:rgba(255,230,120,.75)}
+.ink{border-block:2px solid var(--ink);background:#fff;overflow:hidden;white-space:nowrap;padding:14px 0}
+.ink div{display:inline-block;font-family:'Alfa Slab One';font-size:24px;letter-spacing:3px;animation:mq 26s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:96px 5vw}
+.h2{font-family:'Alfa Slab One';font-weight:400;font-size:clamp(34px,4.6vw,58px);line-height:1.05}
+.h2 small{display:block;font-family:Caveat;color:var(--red);font-size:.55em;transform:rotate(-2deg)}
+.lead{color:var(--muted);margin-top:10px;max-width:560px}
+.drinks{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.dk{background:#fff;border:2px solid var(--ink);border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.dk:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:8px 8px 0 var(--ink)}
+.dk img{width:100%;height:240px;object-fit:cover;border-bottom:2px solid var(--ink)}
+.dk div{padding:14px 16px}.dk h3{font-size:18px}.dk p{font-size:14px;color:var(--muted)}
+.trailer{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;background:#fff;border-block:2px solid var(--ink)}
+.trailer .ph{position:relative}.trailer .ph img{width:100%;height:460px;object-fit:cover;border-radius:24px;border:2px solid var(--ink)}
+.trailer .ph .note{position:absolute;right:-14px;bottom:-14px;background:var(--red);color:#fff;font-family:Caveat;font-size:26px;padding:8px 18px;border-radius:12px;transform:rotate(-5deg)}
+.hrs{margin-top:22px;border-top:2px solid var(--ink)}.hrs div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}.hrs div.td{font-weight:700;color:var(--red)}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.crew{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.crew img{width:100%;height:420px;object-fit:cover;border-radius:24px;border:2px solid var(--ink);transform:rotate(-2deg)}
+.revs{display:grid;gap:16px;margin-top:24px}
+.rv{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:20px 22px;box-shadow:6px 6px 0 var(--ink)}
+.rv p{font-size:16px}.rv small{display:block;margin-top:8px;color:var(--muted);font-weight:600}
+.cater{text-align:center;max-width:780px;margin:0 auto}
+form{margin-top:28px;background:#fff;border:2px solid var(--ink);border-radius:22px;padding:26px;text-align:left;box-shadow:8px 8px 0 var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+input,select{width:100%;border:2px solid var(--ink);border-radius:12px;padding:11px 12px;font:inherit;background:var(--paper)}
+form .btn{margin-top:18px;width:100%;text-align:center}
+.ok{display:none;margin-top:12px;font-family:Caveat;font-size:22px;color:var(--red)}
+.map{border:2px solid var(--ink);border-radius:20px;overflow:hidden;margin-top:30px;height:340px}.map iframe{width:100%;height:100%;border:0;filter:grayscale(1)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;border-top:2px solid var(--ink);font-size:14px;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.trailer,.crew{grid-template-columns:1fr}.hero{padding:36px 16px 50px}section{padding:72px 16px}header{padding:12px 16px}
+.board{height:460px}.stk{width:140px}.stk img{height:140px}.stk.big{width:180px}.stk.big img{height:190px}.drinks{grid-template-columns:1fr 1fr}.trailer .ph img{height:320px}.crew img{height:320px}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:2px solid var(--ink)}.mbar a{text-align:center;padding:14px;font-weight:700;background:#fff}.mbar a:first-child{background:var(--ink);color:#fff}body{padding-bottom:52px}}
+@media(max-width:520px){.row{grid-template-columns:1fr}.dk img{height:170px}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Mila Coffee website</div>
+<div class="status" id="status"><i></i><span>Tue–Fri 6:30am–2pm · Sat–Sun 8am–2pm</span></div>
+<header><a class="logo" href="#">MILA<span>♥</span></a><nav><a href="#drinks">Drinks</a><a href="#trailer">Find us</a><a href="#events">Events</a><a class="btn" style="padding:8px 18px;margin-left:20px" href="tel:+12109293678">Call</a></nav></header>
+
+<div class="hero">
+ <div><h1>Specialty coffee from a little white trailer.<span class="s">on Broadway, San Antonio</span></h1>
+  <p>Mobile specialty coffee pouring Tweed beans, silky lattes, cold brew and donuts, with a crew that remembers your order.</p>
+  <div class="ctas"><a class="btn" href="#trailer">Find the trailer</a><a class="btn w" href="#drinks">See the drinks</a></div>
+  <div class="hint">← psst, drag the photos around</div></div>
+ <div class="board" id="board">
+  <div class="stk big" style="left:4%;top:6%;transform:rotate(-6deg)"><span class="tape"></span><img data-g="/img-mila-coffee-s1.webp" alt="The Mila trailer"><b>the trailer</b></div>
+  <div class="stk" style="right:6%;top:3%;transform:rotate(5deg)"><span class="tape"></span><img data-g="/img-mila-coffee-s3.webp" alt="Latte art"><b>latte art</b></div>
+  <div class="stk" style="left:30%;top:46%;transform:rotate(3deg)"><span class="tape"></span><img data-g="/img-mila-coffee-s7.webp" alt="Iced latte"><b>iced &amp; good</b></div>
+  <div class="stk" style="right:2%;bottom:6%;transform:rotate(-4deg)"><span class="tape"></span><img data-g="/img-mila-coffee-s8.webp" alt="Coffee and donut"><b>donut day</b></div>
+  <div class="stk" style="left:2%;bottom:2%;transform:rotate(-2deg)"><span class="tape"></span><img data-g="/img-mila-coffee-s13.webp" alt="Mila cup"><b>bear approved</b></div>
+ </div>
+</div>
+
+<div class="ink"><div>LATTES ✶ COLD BREW ✶ MEXICAN VANILLA ✶ ESPRESSO ✶ DONUTS ✶ TWEED COFFEE ✶ LATTES ✶ COLD BREW ✶ MEXICAN VANILLA ✶ ESPRESSO ✶ DONUTS ✶ TWEED COFFEE ✶&nbsp;</div></div>
+
+<section id="drinks">
+ <h2 class="h2 reveal"><small>what people order</small>Out the window</h2><p class="lead reveal">Lattes are the most-mentioned drink in Mila's Google reviews, and once you try one you'll see why.</p>
+ <div class="drinks">
+  <div class="dk reveal"><img data-g="/img-mila-coffee-s4.webp" alt=""><div><h3>Lattes</h3><p>Hot or iced, poured with care</p></div></div>
+  <div class="dk reveal"><img data-g="/img-mila-coffee-s5.webp" alt=""><div><h3>Cold brew</h3><p>Smooth and strong</p></div></div>
+  <div class="dk reveal"><img data-g="/img-mila-coffee-s6.webp" alt=""><div><h3>Signature iced</h3><p>Ask about Mexican vanilla</p></div></div>
+  <div class="dk reveal"><img data-g="/img-mila-coffee-s9.webp" alt=""><div><h3>Sweets</h3><p>Donuts and pastries to go</p></div></div>
+ </div>
+ <p class="lead reveal" style="font-size:14px">Full menu and prices on the board at the window.</p>
+</section>
+
+<section class="trailer" id="trailer">
+ <div class="ph reveal"><img data-g="/img-mila-coffee-s14.webp" alt="Mila trailer"><span class="note">look for the white trailer!</span></div>
+ <div class="reveal"><h2 class="h2"><small>come say hi</small>Find the trailer</h2>
+  <div class="hrs" id="hrs"></div>
+  <div class="li"><b>Where</b>2202 Broadway, San Antonio, TX 78215</div>
+  <div class="li"><b>Phone</b><a href="tel:+12109293678">+1 210-929-3678</a></div>
+  <div class="ctas" style="margin-top:20px"><a class="btn" href="https://maps.google.com/?q=Mila%20Coffee%202202%20Broadway%20San%20Antonio">Directions</a><a class="btn w" href="https://www.instagram.com/milacoffeesa/">Instagram</a></div></div>
+</section>
+
+<section>
+ <div class="crew">
+  <img class="reveal" data-g="/img-mila-coffee-s12.webp" alt="The Mila crew">
+  <div class="reveal"><h2 class="h2"><small>4.8★ · 349 reviews</small>The people make it</h2>
+   <div class="revs">
+    <div class="rv"><p>“Marcos and the team have been serving up delicious Tweed coffee and doing it with consistency since they opened their doors. Or should I say, trailer window.”</p><small>Google review</small></div>
+    <div class="rv"><p>“You can tell they are very genuine and love their craft.”</p><small>Google review</small></div>
+    <div class="rv"><p>“Super friendly. Ordered a hot chocolate latte with oat milk. Coffee was great.”</p><small>Google review</small></div>
+   </div></div>
+ </div>
+</section>
+
+<section class="cater" id="events">
+ <h2 class="h2 reveal"><small>we roll up to you</small>Mila at your event</h2><p class="lead reveal" style="margin:10px auto 0">Weddings, office mornings, markets and pop-ups. A specialty coffee bar on wheels.</p>
+ <form class="reveal" id="cf"><div class="row"><div><label>Name</label><input required></div><div><label>Phone or email</label><input required></div></div>
+  <div class="row"><div><label>Date</label><input type="date" required></div><div><label>Guests</label><select><option>Under 50</option><option>50–150</option><option>150+</option></select></div></div>
+  <button class="btn" type="submit">Request the trailer</button><div class="ok" id="ok">✓ demo only: on the live site this goes straight to Mila!</div></form>
+ <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Mila%20Coffee%202202%20Broadway%20San%20Antonio&output=embed"></iframe></div>
+</section>
+<footer><span>© Mila Coffee · San Antonio</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://maps.google.com/?q=Mila%20Coffee%202202%20Broadway%20San%20Antonio">Directions</a><a href="tel:+12109293678">Call</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var bd=document.getElementById('board'),z=5;
+document.querySelectorAll('.stk').forEach(function(s){var sx,sy,ox,oy,dr=false;s.addEventListener('pointerdown',function(e){dr=true;s.setPointerCapture(e.pointerId);sx=e.clientX;sy=e.clientY;ox=s.offsetLeft;oy=s.offsetTop;s.style.zIndex=++z;s.style.right='auto';s.style.bottom='auto';s.style.left=ox+'px';s.style.top=oy+'px'});
+s.addEventListener('pointermove',function(e){if(!dr)return;var nx=Math.max(-20,Math.min(bd.clientWidth-s.offsetWidth+20,ox+e.clientX-sx)),ny=Math.max(-20,Math.min(bd.clientHeight-s.offsetHeight+20,oy+e.clientY-sy));s.style.left=nx+'px';s.style.top=ny+'px'});
+s.addEventListener('pointerup',function(){dr=false})});
+document.getElementById('cf').onsubmit=function(e){e.preventDefault();document.getElementById('ok').style.display='block'};
+var H={0:[8,14],1:null,2:[6.5,14],3:[6.5,14],4:[6.5,14],5:[6.5,14],6:[8,14]},D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,t='';
+[1,2,3,4,5,6,0].forEach(function(i){t+='<div'+(i===d?' class="td"':'')+'><span>'+D[i]+'</span><span>'+(H[i]?(H[i][0]===8?'8am':'6:30am')+' – 2pm':'Closed')+'</span></div>'});document.getElementById('hrs').innerHTML=t;
+var st=document.getElementById('status');if(H[d]&&h>=H[d][0]&&h<14){st.classList.add('o');st.lastChild.textContent='Open now · until 2pm'}else{st.lastChild.textContent='Closed now · Tue–Fri 6:30am–2pm · Sat–Sun 8am–2pm'}
+</script></body></html>

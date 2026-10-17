@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Black Hole Coffee House · Montrose, Houston</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0f17;--bg2:#151826;--ink:#eef0f7;--red:#ff3b4f;--pink:#ff7bb0;--orange:#ff8a3d;--blue:#5aa9ff;--muted:rgba(238,240,247,.62);--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:linear-gradient(90deg,var(--red),var(--pink));color:#fff;text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(13,15,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:22px;letter-spacing:3px}.logo b{display:inline-block;width:18px;height:18px;border-radius:50%;background:#000;box-shadow:0 0 0 3px var(--red),0 0 18px var(--red);vertical-align:-2px;margin:0 2px}
+nav a{margin-left:22px;font-weight:500;font-size:14.5px;color:var(--muted)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:14px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-size:15px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(255,59,79,.5)}.btn.o{background:transparent;border:1.5px solid var(--line)}
+.hero{position:relative;min-height:92vh;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:60px 5vw;overflow:hidden}
+#stars{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero>div{position:relative;z-index:2}
+.hero h1{font-family:'Space Grotesk';font-weight:700;font-size:clamp(46px,7vw,98px);line-height:.98;letter-spacing:-1px}
+.hero h1 span{background:linear-gradient(90deg,var(--red),var(--pink),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:18px;max-width:470px;margin:22px 0 28px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.chips span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13.5px;color:var(--muted)}.chips b{color:var(--ink)}
+.hole{position:relative;justify-self:center;width:min(500px,100%);aspect-ratio:1}
+.disk{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent,rgba(255,59,79,.6),rgba(255,138,61,.5),transparent 40%,rgba(255,123,176,.55),transparent 70%,rgba(255,59,79,.6));filter:blur(14px);animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring{position:absolute;inset:6%;border-radius:50%;border:2px solid rgba(255,255,255,.18);animation:spin 20s linear infinite reverse}
+.ring::after{content:'';position:absolute;top:-7px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}
+.core{position:absolute;inset:14%;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px #000,0 0 60px rgba(255,59,79,.6)}
+.core img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
+section{padding:96px 5vw}
+.h2{font-family:'Space Grotesk';font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.05}.h2 em{font-style:normal;color:var(--red)}
+.lead{color:var(--muted);margin-top:12px;max-width:580px}
+.orbit{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:40px}
+.sys{position:relative;width:min(460px,100%);aspect-ratio:1;justify-self:center}
+.sys .sun{position:absolute;inset:34%;border-radius:50%;background:#000;box-shadow:0 0 0 3px var(--red),0 0 60px var(--red);display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;text-align:center;font-size:14px;line-height:1.2}
+.sys .path{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(255,255,255,.14);animation:spin 40s linear infinite}
+.sys .path.p2{inset:14%;animation-duration:28s;animation-direction:reverse}
+.sys:hover .path{animation-play-state:paused}
+.pl{position:absolute;width:86px;height:86px;border-radius:50%;overflow:hidden;border:3px solid var(--bg);box-shadow:0 0 0 2px var(--c),0 0 18px var(--c);cursor:pointer;transition:transform .3s}
+.pl:hover{transform:scale(1.15)}.pl img{width:100%;height:100%;object-fit:cover}
+.path .pl:nth-child(1){top:-43px;left:calc(50% - 43px)}.path .pl:nth-child(2){bottom:-43px;left:calc(50% - 43px)}.path .pl:nth-child(3){left:-43px;top:calc(50% - 43px)}.path .pl:nth-child(4){right:-43px;top:calc(50% - 43px)}
+.info{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:30px;min-height:240px}
+.info .tg{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--pink)}
+.info h3{font-family:'Space Grotesk';font-size:30px;margin:6px 0}.info p{color:var(--muted)}
+.info .m{display:inline-block;margin-top:14px;background:rgba(255,59,79,.15);color:var(--red);font-weight:700;font-size:13px;border-radius:999px;padding:4px 12px}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.list span{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.space{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;margin-top:40px}
+.space figure{border-radius:18px;overflow:hidden;position:relative}
+.space figure:nth-child(1){grid-column:span 2;grid-row:span 2}.space figure:nth-child(4){grid-column:span 2}
+.space img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.space figure:hover img{transform:scale(1.06)}
+.space figcaption{position:absolute;left:12px;bottom:12px;background:rgba(13,15,23,.8);font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:26px;position:relative;overflow:hidden}
+.rv::before{content:'';position:absolute;right:-40px;top:-40px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(255,59,79,.35),transparent 70%)}
+.rv .s{color:var(--orange);letter-spacing:3px}.rv p{margin:10px 0}.rv small{color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:30px}
+.li{margin-top:16px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0;filter:invert(.9) hue-rotate(200deg) saturate(.7)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.orbit,.visit{grid-template-columns:1fr}.hero{padding:40px 16px 60px;min-height:auto}section{padding:72px 16px}header{padding:12px 16px}
+.hole{width:min(360px,90%)}.sys{width:min(330px,86%)}.pl{width:64px;height:64px}.path .pl:nth-child(1){top:-32px;left:calc(50% - 32px)}.path .pl:nth-child(2){bottom:-32px;left:calc(50% - 32px)}.path .pl:nth-child(3){left:-32px;top:calc(50% - 32px)}.path .pl:nth-child(4){right:-32px;top:calc(50% - 32px)}
+.space{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.space figure:nth-child(4){grid-column:auto}.revs{grid-template-columns:1fr}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:1px solid var(--line);background:var(--bg2)}.mbar a{text-align:center;padding:14px;font-weight:700}.mbar a:first-child{background:var(--red)}body{padding-bottom:52px}}
+@media(max-width:520px){.list{grid-template-columns:1fr}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Black Hole Coffee House website</div>
+<header><a class="logo" href="#">BLACK H<b></b>LE</a><nav><a href="#menu">Menu</a><a href="#space">The space</a><a href="#visit">Visit</a><a class="btn" style="padding:9px 18px;margin-left:20px" href="tel:+17135280653">Call</a></nav></header>
+
+<div class="hero"><canvas id="stars"></canvas>
+ <div><h1>Get pulled into <span>Montrose's</span> coziest orbit.</h1>
+  <p>The friendly neighborhood coffee house on Graustark: deep couches, cajeta lattes, nitro cold brew, fresh bakes with vegan options, and a shaded patio.</p>
+  <div class="ctas"><a class="btn" href="#menu">Explore the menu</a><a class="btn o" href="#visit">Directions</a></div>
+  <div class="chips"><span><b>2,424</b> Google reviews</span><span><b>4.3★</b> average</span><span>Vegan options</span></div></div>
+ <div class="hole reveal"><div class="disk"></div><div class="ring"></div><div class="core"><img data-g="/img-black-hole-coffee-s2.webp" alt="Inside Black Hole"></div></div>
+</div>
+
+<section id="menu">
+ <h2 class="h2 reveal">Things in <em>orbit</em></h2><p class="lead reveal">Hover to pause the orbit, then tap a planet to see what it is.</p>
+ <div class="orbit">
+  <div class="sys reveal">
+   <div class="path"><div class="pl" style="--c:var(--red)" data-t="Cajeta latte" data-g2="Most-loved drink" data-d="Sweet goat-milk caramel in a velvety latte. The most-mentioned drink in reviews." data-m="33 mentions"><img data-g="/img-black-hole-coffee-s5.webp" alt=""></div><div class="pl" style="--c:var(--orange)" data-t="Fresh bakes" data-g2="From the case" data-d="Croissants, muffins and cookies, with vegan options every day." data-m="Vegan options"><img data-g="/img-black-hole-coffee-s7.webp" alt=""></div><div class="pl" style="--c:var(--pink)" data-t="Cookies" data-g2="Big and soft" data-d="Peanut butter and molasses cookies have their own fans." data-m="Fan favorite"><img data-g="/img-black-hole-coffee-s8.webp" alt=""></div><div class="pl" style="--c:var(--blue)" data-t="Nitro cold brew" data-g2="Cold &amp; smooth" data-d="Creamy, cascading and strong. Perfect for Houston heat." data-m="20 mentions"><img data-g="/img-black-hole-coffee-s14.webp" alt=""></div></div>
+   <div class="path p2"><div class="pl" style="--c:var(--pink)" data-t="Lattes &amp; cappuccinos" data-g2="The classics" data-d="Reviewers rave about the milk texture and quality espresso." data-m="Quality espresso"><img data-g="/img-black-hole-coffee-s6.webp" alt=""></div><div class="pl" style="--c:var(--orange)" data-t="The pastry counter" data-g2="Grab and go" data-d="Something new every time you visit." data-m="Daily"><img data-g="/img-black-hole-coffee-s9.webp" alt=""></div></div>
+   <div class="sun">BLACK<br>HOLE</div>
+  </div>
+  <div class="reveal"><div class="info" id="info"><span class="tg">Most-loved drink</span><h3>Cajeta latte</h3><p>Sweet goat-milk caramel in a velvety latte. The most-mentioned drink in reviews.</p><span class="m">33 mentions</span></div>
+   <div class="list"><span>☕ Espresso &amp; lattes</span><span>🧊 Nitro cold brew</span><span>🍵 Teas &amp; kombucha</span><span>🥐 Vegan-friendly bakes</span></div>
+   <p class="lead" style="font-size:14px">Full menu and prices at the counter.</p></div>
+ </div>
+</section>
+
+<section id="space" style="padding-top:0">
+ <h2 class="h2 reveal">Couches, art &amp; <em>disco balls</em></h2><p class="lead reveal">"Couches" is mentioned in 48 reviews. Settle in for an hour or the whole afternoon.</p>
+ <div class="space">
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s3.webp" alt=""><figcaption>The lounge</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s4.webp" alt=""><figcaption>The red wall</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s15.webp" alt=""><figcaption>Sofa corner</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s11.webp" alt=""><figcaption>The patio</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s13.webp" alt=""><figcaption>Study nook</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-black-hole-coffee-s12.webp" alt=""><figcaption>Shade sails</figcaption></figure>
+ </div>
+</section>
+
+<section>
+ <h2 class="h2 reveal">Signals from <em>regulars</em></h2>
+ <div class="revs">
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“This is a great coffeehouse. The teas, coffee, &amp; pastries are good. The atmosphere is alive.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Zero misses regarding coffee and pastries! Milk texture on hot drinks is fantastic, their espresso is quality.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Black Hole Coffee House 💫 officially one of my new favorite hangout spots!”</p><small>Google review</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Coordinates</h2>
+ <div class="visit">
+  <div class="card reveal"><div class="li" style="margin-top:0"><b>Address</b>4504 Graustark St, Houston, TX 77006</div>
+   <div class="li"><b>Phone</b><a href="tel:+17135280653">+1 713-528-0653</a></div>
+   <div class="li"><b>Good to know</b>Small lot plus plenty of street parking, and a taco truck out front.</div>
+   <div class="ctas" style="margin-top:20px"><a class="btn" href="https://maps.google.com/?q=Black%20Hole%20Coffee%20House%204504%20Graustark%20St%20Houston">Directions</a><a class="btn o" href="https://www.instagram.com/blackholecoffee/">Instagram</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Black%20Hole%20Coffee%20House%204504%20Graustark%20St%20Houston&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© Black Hole Coffee House · Houston</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://maps.google.com/?q=Black%20Hole%20Coffee%20House%204504%20Graustark%20St%20Houston">Directions</a><a href="tel:+17135280653">Call</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var inf=document.getElementById('info');document.querySelectorAll('.pl').forEach(function(p){p.onclick=function(){inf.innerHTML='<span class="tg">'+p.dataset.g2+'</span><h3>'+p.dataset.t+'</h3><p>'+p.dataset.d+'</p><span class="m">'+p.dataset.m+'</span>'}});
+var cv=document.getElementById('stars'),cx=cv.getContext('2d'),S=[];function rs(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+for(var i=0;i<120;i++)S.push({a:Math.random()*6.28,r:Math.random()*.7+.05,s:Math.random()*.002+.0005,z:Math.random()*1.5+.3});
+(function f(){cx.clearRect(0,0,cv.width,cv.height);var ox=cv.width*.72,oy=cv.height*.5,m=Math.max(cv.width,cv.height);S.forEach(function(p){p.a+=p.s;p.r-=.0004;if(p.r<.04){p.r=.75}cx.globalAlpha=Math.min(1,p.r*2);cx.fillStyle='#fff';cx.beginPath();cx.arc(ox+Math.cos(p.a)*p.r*m,oy+Math.sin(p.a)*p.r*m*.6,p.z,0,7);cx.fill()});requestAnimationFrame(f)})();
+</script></body></html>

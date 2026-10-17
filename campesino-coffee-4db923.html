@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Campesino Coffee · Montrose, Houston</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf3e6;--ink:#2b1d14;--terra:#c8553d;--teal:#1f8a80;--mustard:#e9a92c;--pink:#e05a8a;--muted:rgba(43,29,20,.64);--line:rgba(43,29,20,.14)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:500;padding:7px 12px}
+.picado{display:flex;justify-content:center;overflow:hidden;height:46px;position:relative}
+.picado span{flex:0 0 64px;height:42px;margin:0 3px;clip-path:polygon(0 0,100% 0,100% 70%,85% 85%,70% 70%,50% 100%,30% 70%,15% 85%,0 70%);transform-origin:top center;animation:flut 3s ease-in-out infinite;-webkit-mask:radial-gradient(circle 5px at 30% 35%,transparent 98%,#000) ,radial-gradient(circle 5px at 70% 35%,transparent 98%,#000);-webkit-mask-composite:source-in;mask-composite:intersect}
+@keyframes flut{50%{transform:rotate(3deg) skewX(2deg)}}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(251,243,230,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.logo{font-family:Fraunces;font-weight:800;font-size:26px;color:var(--terra)}.logo i{color:var(--teal);font-style:italic}
+nav a{margin-left:22px;font-weight:600;font-size:14.5px}nav a:hover{color:var(--terra)}
+.btn{display:inline-block;background:var(--terra);color:#fff;font-weight:700;padding:14px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(200,85,61,.3)}.btn.t{background:var(--teal)}.btn.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:60px 5vw 80px}
+.kick{font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12.5px;color:var(--teal)}
+.hero h1{font-family:Fraunces;font-weight:800;font-size:clamp(44px,6.4vw,88px);line-height:1.02;margin:14px 0}
+.hero h1 i{font-weight:600;color:var(--terra)}
+.hero p{font-size:18px;color:var(--muted);max-width:480px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.meta{display:flex;gap:24px;margin-top:28px;font-size:14px;color:var(--muted);flex-wrap:wrap}.meta b{display:block;font-family:Fraunces;font-size:24px;color:var(--ink)}
+.house{position:relative;justify-self:center;width:min(480px,100%)}
+.house .roof{width:100%;aspect-ratio:2.4;background:var(--terra);clip-path:polygon(50% 0,100% 100%,0 100%);position:relative}
+.house .roof::after{content:'';position:absolute;left:50%;top:38%;width:44px;height:44px;border-radius:50%;background:var(--mustard);transform:translateX(-50%);box-shadow:0 0 0 8px rgba(233,169,44,.3);animation:glow 3s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 16px rgba(233,169,44,.15)}}
+.house .body{border:10px solid var(--terra);border-top:0;border-radius:0 0 22px 22px;overflow:hidden;aspect-ratio:1.25;background:#ddd}
+.house .body img{width:100%;height:100%;object-fit:cover}
+.house .sign{position:absolute;left:-18px;bottom:28px;background:#fff;border-radius:14px;padding:10px 16px;box-shadow:0 12px 26px rgba(0,0,0,.15);font-weight:700;transform:rotate(-4deg)}
+.house .sign small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+section{padding:96px 5vw}
+.h2{font-family:Fraunces;font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1.06}.h2 i{color:var(--terra);font-weight:600}
+.lead{color:var(--muted);margin-top:10px;max-width:580px}
+.tour{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;margin-top:40px}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:3px solid var(--ink);border-radius:18px;padding:10px;background:#fff}
+.rm{border:2px dashed var(--line);border-radius:12px;padding:20px 16px;cursor:pointer;transition:.25s;min-height:100px;display:flex;flex-direction:column;justify-content:flex-end}
+.rm b{font-family:Fraunces;font-size:20px}.rm span{font-size:13px;color:var(--muted)}
+.rm:hover{border-color:var(--terra)}.rm.on{background:var(--c);border-style:solid;border-color:var(--c);color:#fff}.rm.on span{color:rgba(255,255,255,.85)}
+.rm.wide{grid-column:span 2}
+.view{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s,transform 6s}
+.view img.on{opacity:1;transform:scale(1.05)}
+.view .cap{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);border-radius:999px;padding:6px 16px;font-weight:700;z-index:2}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.mi{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .3s}
+.mi:hover{transform:translateY(-6px) rotate(-.6deg)}
+.mi img{width:100%;height:230px;object-fit:cover}.mi div{padding:16px 18px}.mi h3{font-family:Fraunces;font-size:22px}.mi p{font-size:14px;color:var(--muted)}
+.mi .ct{display:inline-block;background:var(--mustard);color:var(--ink);font-size:12px;font-weight:700;border-radius:999px;padding:2px 10px;margin-top:6px}
+.band{background:var(--teal);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.band .lead{color:rgba(255,255,255,.82)}
+.band ul{list-style:none;margin-top:16px}.band li{margin:8px 0;font-weight:600}.band li::before{content:'☕ '}
+form{background:#fff;color:var(--ink);border-radius:22px;padding:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+input,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;background:var(--cream)}
+form .btn{margin-top:18px;width:100%;text-align:center}
+.ok{display:none;margin-top:12px;background:#fdf0d5;border-radius:12px;padding:12px;font-weight:600;font-size:14px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:#fff;border-radius:22px;padding:26px;border:1px solid var(--line);position:relative}
+.rv::before{content:'“';position:absolute;top:-4px;right:18px;font-family:Fraunces;font-size:90px;color:var(--mustard);line-height:1}
+.rv .s{color:var(--terra);letter-spacing:3px}.rv p{margin:10px 0}.rv small{color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+.hrs div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}.hrs div.td{color:var(--terra);font-weight:700}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0;filter:sepia(.25)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.tour,.band,.visit{grid-template-columns:1fr}.hero{padding:40px 16px 60px}section{padding:72px 16px}header{padding:12px 16px}
+.menu{grid-template-columns:1fr 1fr}.revs{grid-template-columns:1fr}.house{width:min(360px,90%)}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:1px solid var(--line)}.mbar a{text-align:center;padding:14px;font-weight:700;background:#fff}.mbar a:first-child{background:var(--terra);color:#fff}body{padding-bottom:52px}}
+@media(max-width:520px){.menu,.row{grid-template-columns:1fr}.mi img{height:200px}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Campesino Coffee website</div>
+<div class="picado" id="picado"></div>
+<header><a class="logo" href="#">Campesino <i>Coffee</i></a><nav><a href="#tour">The house</a><a href="#menu">Menu</a><a href="#visit">Visit</a><a class="btn" style="padding:9px 18px;margin-left:20px" href="tel:+18328316486">Call</a></nav></header>
+
+<div class="hero">
+ <div><span class="kick">Montrose · Houston</span>
+  <h1>Café de olla in a <i>1940s bungalow.</i></h1>
+  <p>A cozy old house turned coffee shop, full of little rooms, a patio under string lights, horchata lattes and tamales made for long afternoons.</p>
+  <div class="ctas"><a class="btn" href="#tour">Take the tour</a><a class="btn o" href="#menu">See the menu</a></div>
+  <div class="meta"><div><b>1,362</b>Google reviews</div><div><b>4.6★</b>average</div><div><b>9pm</b>open late</div></div></div>
+ <div class="house reveal"><div class="roof"></div><div class="body"><img data-g="/img-campesino-coffee-s1.webp" alt="Campesino Coffee house"></div><div class="sign">Come on in<small>2602 Waugh Dr</small></div></div>
+</div>
+
+<section id="tour" style="padding-top:20px">
+ <h2 class="h2 reveal">Pick a <i>room</i></h2><p class="lead reveal">Every corner of the house has its own mood. Tap a room to look inside.</p>
+ <div class="tour">
+  <div class="rooms reveal">
+   <div class="rm on" style="--c:var(--terra)" data-i="0"><b>The porch</b><span>Coffee with a breeze</span></div>
+   <div class="rm" style="--c:var(--teal)" data-i="1"><b>The patio</b><span>String lights &amp; murals</span></div>
+   <div class="rm" style="--c:var(--mustard)" data-i="2"><b>Living room</b><span>Sofas made for studying</span></div>
+   <div class="rm" style="--c:var(--pink)" data-i="3"><b>Yellow room</b><span>Bright and buzzing</span></div>
+   <div class="rm wide" style="--c:var(--ink)" data-i="4"><b>The gallery room</b><span>Framed photos, quiet corners</span></div>
+  </div>
+  <div class="view reveal" id="view">
+   <img class="on" data-g="/img-campesino-coffee-s2.webp" alt=""><img data-g="/img-campesino-coffee-s3.webp" alt=""><img data-g="/img-campesino-coffee-s5.webp" alt=""><img data-g="/img-campesino-coffee-s6.webp" alt=""><img data-g="/img-campesino-coffee-s13.webp" alt="">
+   <span class="cap" id="cap">The porch</span></div>
+ </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+ <h2 class="h2 reveal">What's <i>brewing</i></h2><p class="lead reveal">The most-mentioned favorites from 1,300+ Google reviews.</p>
+ <div class="menu">
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s8.webp" alt=""><div><h3>Horchata latte</h3><p>Cinnamon-sweet and creamy</p><span class="ct">59 mentions</span></div></div>
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s12.webp" alt=""><div><h3>Café de olla</h3><p>Spiced coffee in clay mugs</p><span class="ct">35 mentions</span></div></div>
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s11.webp" alt=""><div><h3>Tamales</h3><p>The surprise favorite</p><span class="ct">79 mentions</span></div></div>
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s10.webp" alt=""><div><h3>Empanadas</h3><p>Try the guava</p><span class="ct">54 mentions</span></div></div>
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s9.webp" alt=""><div><h3>Pan dulce</h3><p>Conchas with your coffee</p></div></div>
+  <div class="mi reveal"><img data-g="/img-campesino-coffee-s7.webp" alt=""><div><h3>Free refills</h3><p>Stay as long as you like</p></div></div>
+ </div>
+ <p class="lead reveal" style="font-size:14px">Ask at the counter for today's full menu and prices.</p>
+</section>
+
+<section class="band">
+ <div class="reveal"><h2 class="h2" style="color:#fff">Host it at the <i style="color:var(--mustard)">house</i></h2><p class="lead">Book a room or the patio for study groups, birthdays, club meetings and small celebrations.</p>
+  <ul><li>Rooms of different sizes</li><li>Patio for bigger groups</li><li>Coffee and pastries for the table</li></ul></div>
+ <form class="reveal" id="cf"><div class="row"><div><label>Name</label><input required></div><div><label>Phone</label><input required></div></div>
+  <div class="row"><div><label>Date</label><input type="date" required></div><div><label>Group size</label><select><option>Under 10</option><option>10–25</option><option>25+</option></select></div></div>
+  <button class="btn" type="submit">Request a booking</button><div class="ok" id="ok">✓ Demo only: on the live site this request goes straight to Campesino.</div></form>
+</section>
+
+<section>
+ <h2 class="h2 reveal">Neighbors <i>say</i></h2>
+ <div class="revs">
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Such a cute cozy cafe! It's within an old eclectic house that was retrofitted to fit the cafe. As a result the decor and ambience is super cozy.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“I live in the neighborhood and am super grateful for Campesino - incredible hangout vibe and the best dirty chai latte I've ever had.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Campesino is a quaint little throwback coffee house with a rebellious streak.”</p><small>Google review</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Come <i>over</i></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="hrs" id="hrs"></div>
+   <div class="li"><b>Address</b>2602 Waugh Dr, Houston, TX 77006</div>
+   <div class="li"><b>Phone</b><a href="tel:+18328316486">+1 832-831-6486</a></div>
+   <div class="ctas" style="margin-top:18px"><a class="btn" href="https://maps.google.com/?q=Campesino%20Coffee%202602%20Waugh%20Dr%20Houston">Directions</a><a class="btn t" href="https://www.instagram.com/campesinocoffee1/">Instagram</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Campesino%20Coffee%202602%20Waugh%20Dr%20Houston&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© Campesino Coffee · Houston</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://maps.google.com/?q=Campesino%20Coffee%202602%20Waugh%20Dr%20Houston">Directions</a><a href="tel:+18328316486">Call</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var pc=['#c8553d','#1f8a80','#e9a92c','#e05a8a','#6a4c93'],pp=document.getElementById('picado');for(var i=0;i<26;i++){var s=document.createElement('span');s.style.background=pc[i%5];s.style.animationDelay=(i%5*0.3)+'s';pp.appendChild(s)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var vi=document.querySelectorAll('#view img');document.querySelectorAll('.rm').forEach(function(r){r.onclick=function(){document.querySelectorAll('.rm').forEach(function(x){x.classList.remove('on')});r.classList.add('on');vi.forEach(function(v,i){v.classList.toggle('on',i==r.dataset.i)});document.getElementById('cap').textContent=r.querySelector('b').textContent}});
+document.getElementById('cf').onsubmit=function(e){e.preventDefault();document.getElementById('ok').style.display='block'};
+var H={0:'7:30am – 8pm',1:'7am – 9pm',2:'7am – 9pm',3:'7am – 9pm',4:'7am – 9pm',5:'7am – 9pm',6:'7:30am – 9pm'},D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})).getDay(),t='';[1,2,3,4,5,6,0].forEach(function(i){t+='<div'+(i===d?' class="td"':'')+'><span>'+D[i]+'</span><span>'+H[i]+'</span></div>'});document.getElementById('hrs').innerHTML=t;
+</script></body></html>
