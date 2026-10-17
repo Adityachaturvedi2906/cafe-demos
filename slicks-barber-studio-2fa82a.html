@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
+<title>Slicks Barber Studio · San Antonio</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06070f;--bg2:#0d1020;--ink:#eef1ff;--cyan:#38e1ff;--blue:#2f6bff;--pink:#ff3dcb;--violet:#8b5cff;--muted:rgba(238,241,255,.64);--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:linear-gradient(90deg,var(--violet),var(--pink));color:#fff;text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+.status{display:flex;justify-content:center;gap:10px;align-items:center;font-size:13.5px;font-weight:600;padding:8px 12px;background:#0b0d1a;border-bottom:1px solid var(--line)}
+.status i{width:8px;height:8px;border-radius:50%;background:#777}.status.o i{background:#3dffa0;box-shadow:0 0 10px #3dffa0;animation:bl 1.4s infinite}@keyframes bl{50%{opacity:.3}}
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;background:rgba(6,7,15,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-family:Unbounded,sans-serif;font-weight:800;font-size:22px;letter-spacing:1px}.logo span{background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{margin-left:24px;font-size:14px;font-weight:500;color:var(--muted)}nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:14px 26px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink));background-size:200% 100%;color:#fff;transition:background-position .5s,transform .2s,box-shadow .2s}
+.btn:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 12px 30px rgba(139,92,255,.45)}
+.btn.ghost{background:transparent;border:1.5px solid var(--line)}.btn.ghost:hover{border-color:var(--cyan);box-shadow:none}
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:80px 5vw 90px;overflow:hidden}
+.hex{position:absolute;inset:-40px -40px auto auto;width:720px;height:520px;opacity:.55;pointer-events:none}
+.hex path{fill:none;stroke:var(--violet);stroke-width:2;filter:drop-shadow(0 0 6px var(--violet));animation:glow 4s ease-in-out infinite}
+.hex path:nth-child(3n){animation-delay:1.3s;stroke:var(--blue)}.hex path:nth-child(3n+1){animation-delay:2.6s}
+@keyframes glow{0%,100%{opacity:.25}50%{opacity:1}}
+.kick{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan)}
+.kick::before{content:'';width:28px;height:2px;background:var(--cyan)}
+.hero h1{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(44px,6.6vw,92px);line-height:1;margin:20px 0 22px;letter-spacing:-1px}
+.hero h1 .g{background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink),var(--cyan));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:300% 0}}
+.hero p{font-size:18px;color:var(--muted);max-width:500px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.proof{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.proof div b{display:block;font-family:Unbounded,sans-serif;font-size:28px}.proof div span{font-size:13px;color:var(--muted)}
+.ring{position:relative;width:min(440px,100%);aspect-ratio:1;justify-self:center}
+.ring::before{content:'';position:absolute;inset:0;border-radius:50%;padding:10px;background:conic-gradient(from 0deg,var(--cyan),var(--violet),var(--pink),var(--cyan));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;filter:drop-shadow(0 0 22px rgba(139,92,255,.7))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring img{position:absolute;inset:22px;width:calc(100% - 44px);height:calc(100% - 44px);border-radius:50%;object-fit:cover;background:#151a33}
+.ring .tag{position:absolute;right:-6px;bottom:30px;background:#fff;color:#111;font-weight:800;font-size:13px;padding:10px 16px;border-radius:14px;transform:rotate(-6deg);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.ring .tag small{display:block;font-weight:600;color:#555;font-size:11px}
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:#090b16}
+.mq div{display:inline-block;font-family:Unbounded,sans-serif;font-weight:700;font-size:22px;letter-spacing:2px;animation:mq 26s linear infinite;color:transparent;-webkit-text-stroke:1px rgba(238,241,255,.55)}
+.mq div b{color:var(--pink);-webkit-text-stroke:0;font-weight:700}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:100px 5vw}
+.h2{font-family:Unbounded,sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,56px);line-height:1.05;letter-spacing:-.5px}
+.h2 em{font-style:normal;color:var(--cyan)}
+.lead{color:var(--muted);margin-top:12px;max-width:560px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.arr{display:flex;gap:10px}.arr button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--ink);font-size:18px;cursor:pointer;transition:.2s}.arr button:hover{border-color:var(--cyan);color:var(--cyan)}
+/* reels */
+.reels{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:none}.reels::-webkit-scrollbar{display:none}
+.reel{flex:0 0 min(260px,70vw);aspect-ratio:9/16;border-radius:20px;overflow:hidden;position:relative;scroll-snap-align:start;cursor:zoom-in;background:#141833}
+.reel img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.reel:hover img{transform:scale(1.07)}
+.reel::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.75))}
+.reel span{position:absolute;left:16px;bottom:16px;z-index:2;font-weight:700;font-size:14px}
+.reel span small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.reel .pl{position:absolute;top:14px;right:14px;z-index:2;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);display:grid;place-items:center;font-size:11px}
+/* designs */
+.designs{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;background:radial-gradient(circle at 80% 30%,rgba(255,61,203,.18),transparent 55%),var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.neon{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(30px,4vw,52px);line-height:1.05;color:#fff;text-shadow:0 0 8px var(--pink),0 0 24px var(--pink),0 0 48px var(--violet);animation:fl 5s infinite}
+@keyframes fl{0%,43%,47%,100%{opacity:1}45%{opacity:.45}}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.dgrid figure{border-radius:16px;overflow:hidden;aspect-ratio:3/4;cursor:zoom-in;background:#141833;transform:translateY(0);transition:transform .4s}
+.dgrid figure:nth-child(even){transform:translateY(34px)}
+.dgrid figure:hover{transform:translateY(-6px)}.dgrid figure:nth-child(even):hover{transform:translateY(28px)}
+.dgrid img{width:100%;height:100%;object-fit:cover}
+/* bento */
+.bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.bento figure{position:relative;border-radius:20px;overflow:hidden;cursor:zoom-in;background:#141833}
+.bento figure:first-child{grid-row:span 2}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.bento figure:hover img{transform:scale(1.06)}
+.bento figcaption{position:absolute;left:14px;bottom:14px;background:rgba(6,7,15,.75);backdrop-filter:blur(8px);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px}
+.bento .txt{background:linear-gradient(135deg,#1b1f45,#2a1240);display:flex;flex-direction:column;justify-content:center;padding:26px;cursor:default}
+.bento .txt b{font-family:Unbounded,sans-serif;font-size:22px;line-height:1.2}.bento .txt p{color:var(--muted);font-size:14px;margin-top:8px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.s{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:28px;overflow:hidden;transition:border-color .3s,transform .3s}
+.s::before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;right:-90px;top:-90px;background:radial-gradient(circle,rgba(56,225,255,.22),transparent 70%);transition:transform .5s}
+.s:hover{border-color:rgba(56,225,255,.5);transform:translateY(-4px)}.s:hover::before{transform:scale(1.5)}
+.s .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(139,92,255,.16);margin-bottom:18px}
+.s .ic svg{width:24px;height:24px;stroke:var(--cyan);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s h3{font-size:19px;font-weight:700}.s p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.note{margin-top:20px;color:var(--muted);font-size:14px}
+/* book */
+.book{margin:0 5vw;border-radius:28px;padding:60px;position:relative;overflow:hidden;background:linear-gradient(120deg,#1739a8,#5b2bd6 55%,#c2268f);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.book::before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;border:2px solid rgba(255,255,255,.25);right:-120px;top:-160px;box-shadow:0 0 40px rgba(255,255,255,.25),inset 0 0 40px rgba(255,255,255,.2);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08);opacity:.6}}
+.book h2{font-family:Unbounded,sans-serif;font-size:clamp(28px,3.6vw,46px);line-height:1.1}
+.book p{color:rgba(255,255,255,.82);margin-top:10px}
+.book .chk{list-style:none;margin-top:18px}.book .chk li{margin:6px 0;font-weight:600}.book .chk li::before{content:'✓';display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);margin-right:10px;font-size:12px}
+.book .btn{background:#fff;color:#1b1450;justify-self:start}.book .btn:hover{box-shadow:0 14px 30px rgba(0,0,0,.3)}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column}
+.rv .st{color:#ffd166;letter-spacing:3px;font-size:14px}.rv p{margin:14px 0 18px;font-size:16px;flex:1}
+.rv .who{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+.rv .who b{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--pink));color:#fff;font-size:13px}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;margin-top:40px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:32px}
+.hrs div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}.hrs div span:last-child{color:var(--muted)}
+.hrs div.td{color:var(--cyan);font-weight:700}.hrs div.td span:last-child{color:var(--cyan)}
+.li{margin-top:16px;font-size:15px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:400px}.map iframe{width:100%;height:100%;min-height:400px;border:0;filter:invert(.92) hue-rotate(190deg) saturate(.8)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:30px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:20px}.lb.on{display:flex}.lb img{max-height:90vh;border-radius:12px}
+.mbar{display:none}
+@media(max-width:960px){
+nav a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding:50px 16px 70px}.ring{width:min(340px,90%)}.hex{width:480px;opacity:.35}
+section{padding:80px 16px}header{padding:12px 16px}
+.designs{grid-template-columns:1fr}.dgrid{grid-template-columns:repeat(2,1fr)}
+.bento{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}.bento figure:first-child{grid-column:span 2;grid-row:auto}
+.svc,.revs,.visit{grid-template-columns:1fr}.book{grid-template-columns:1fr;padding:36px 24px;margin:0 16px}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#0b0d1a;border-top:1px solid var(--line)}
+.mbar a{text-align:center;padding:15px;font-weight:700}.mbar a:first-child{background:linear-gradient(90deg,var(--blue),var(--pink))}body{padding-bottom:54px}}
+@media(max-width:520px){nav .btn{display:none}.dgrid figure:nth-child(even){transform:none}.proof{gap:18px}.proof div b{font-size:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Slicks Barber Studio website</div>
+<div class="status" id="status"><i></i><span>Open 7 days a week</span></div>
+<header><a class="logo" href="#">SLICKS <span>STUDIO</span></a><nav><a href="#cuts">Fresh cuts</a><a href="#studio">Studio</a><a href="#services">Services</a><a href="#visit">Visit</a><a class="btn" style="padding:10px 20px;margin-left:24px" href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book now</a></nav></header>
+
+<div class="hero">
+ <svg class="hex" viewBox="0 0 720 520" id="hex"></svg>
+ <div><span class="kick">Barber studio · Perrin Beitel · San Antonio</span>
+  <h1>Here, quality<br><span class="g">matters.</span></h1>
+  <p>Clean fades, sharp line-ups, straight razor detail and hair designs, done by barbers who take their time with every cut. Appointments guaranteed, walk-ins always welcome.</p>
+  <div class="ctas"><a class="btn" href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book your cut →</a><a class="btn ghost" href="tel:+12102777965">Call 210-277-7965</a></div>
+  <div class="proof"><div><b>4.9★</b><span>Google rating</span></div><div><b data-count="1016">0</b><span>Google reviews</span></div><div><b>9pm</b><span>Open late weekdays</span></div></div></div>
+ <div class="ring reveal"><img data-g="ANWiy9QzQx6lOEc2w2WsDqIDRA36Ap-f1JohG_wVhb79AGLOrjK19cPw2knRWL00TC1gej_Cfh_gwUmoBZz-3U6MAiWZfJPeqH6r7kihAD-5PDcArcZQdS74xrM5TI0MEhwwUkwL6U7vGLHz9brV" data-w="900" data-h="900" alt="Fresh fade at Slicks"><div class="tag">Walk-ins welcome<small>Appointments guaranteed</small></div></div>
+</div>
+
+<div class="mq"><div>FADES <b>✦</b> TAPERS <b>✦</b> HAIR DESIGNS <b>✦</b> LINE-UPS <b>✦</b> BEARDS <b>✦</b> STRAIGHT RAZOR <b>✦</b> KIDS CUTS <b>✦</b> FADES <b>✦</b> TAPERS <b>✦</b> HAIR DESIGNS <b>✦</b> LINE-UPS <b>✦</b> BEARDS <b>✦</b> STRAIGHT RAZOR <b>✦</b> KIDS CUTS <b>✦</b>&nbsp;</div></div>
+
+<section id="cuts">
+ <div class="head reveal"><div><h2 class="h2">Fresh out <em>the chair</em></h2><p class="lead">Real cuts from Slicks. Swipe through, then tap any photo to see it up close.</p></div>
+ <div class="arr"><button onclick="sl(-1)" aria-label="Previous">←</button><button onclick="sl(1)" aria-label="Next">→</button></div></div>
+ <div class="reels" id="reels">
+  <div class="reel"><img data-g="ANWiy9TX-HXcMAh7cXt8loRTfOk6xriT0NwEmnvl7fZJQCZtAL1DQcGD9W6hSh0LWHHRsm0gdfpLya5aBNtLKsp8xbcEZnWnF-LjPTSGdfnPdZzgnMBY5jwlWL7fw2RKPcMRk5rFYbMsTIvdzwY_" alt="Textured crop"><div class="pl">▶</div><span>Textured crop<small>Low taper</small></span></div>
+  <div class="reel"><img data-g="ANWiy9QkGSGkASnnmH73w67VYK3RgEm_JPY3yk-TOnEdnKyjNRZR75w3TbNs9vxDCoEud4AMdyZKtE5IYFdxlO4-hEcrM-ErLf1YAFg9o1Xir89IpjshV_ZqqExHLbRt42qOlXA--f-ljqTNW1D_" alt="Blonde fade"><div class="pl">▶</div><span>Bleached top<small>Skin fade</small></span></div>
+  <div class="reel"><img data-g="ANWiy9Sj1JmN1v6pJO8cNPYb0sjy57UmbKAXJgKuOUuj9IMXoEVSN-vmD_B4n0xPAMoqmgTWLW4WcEhM7H9Agz9NBORJ_xyJf1jTKN1-OiIxDv6V43rKUL7wFCuk7geWVYKJR9N7qK2ja5sWnR_o" alt="Clean taper"><div class="pl">▶</div><span>Clean taper<small>Sharp neckline</small></span></div>
+  <div class="reel"><img data-g="ANWiy9TWUxYYTSNnUwqIfpswhJhAXz1nxzP_c3iFJUoG7vYP4Zw3O4Qqx0gO14afsjJlyZGB-Pqq49p29-ctrvAQqXyTDkm7UirNNRmCQMIFkesRiGCdBx5eobmff-wRNc8nhLj-v-9wbEi2rgE" alt="Fade"><div class="pl">▶</div><span>No filter needed<small>Mid fade</small></span></div>
+  <div class="reel"><img data-g="ANWiy9Q28GDjfh8UNKybXmvZnAk4NtPVj4RC0fqnbXC3EgN0UB9Yug3rB0QE9WiyRnxoNXE6Ta0yC6ASBsZ8cl_VLiEr_d11-U_s0x-HEsBpzZ3_6Xswh0VcXqMasL-ZF1tT5oLaD-nvZDdmfLJp" alt="Beard and fade"><div class="pl">▶</div><span>Beard &amp; fade<small>Line-up</small></span></div>
+  <div class="reel"><img data-g="ANWiy9QXqoleK9zVhZ15PeXMprfQ9EUc3ViQllIxp0P_pikADOnlPT8n7NT3u5CTQBpU3vhuhM5EuxtF8Yv9IfEPONN9qpGdns5v5YXY4w_c4p6Fn4xpMKQaXLTF5fcxV1jIY7kXWYWH4Ljv4VHQ" alt="Fresh cut"><div class="pl">▶</div><span>Fresh cut<small>Taper &amp; texture</small></span></div>
+ </div>
+</section>
+
+<section class="designs">
+ <div class="reveal"><div class="neon">The world<br>is yours.</div><p class="lead">Straight from the neon sign on our wall. Bring an idea, a photo or just a vibe, and walk out with a design that's one of one.</p><div class="ctas"><a class="btn" href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book a design</a></div></div>
+ <div class="dgrid">
+  <figure class="reveal"><img data-g="ANWiy9Qhj9p2O7xAzgSmpBlxhEEjgnJq1WCVfKvvOFl9AinizEVPkMETdI_uUT_CDFuTvmiQeCcbf5bvlW7mZ-MY4CRwARdcHTRcA43iwMRWxIW9xFQpyMptuRMkCoMGvMDF1uuHeBYpZD7pUUo" alt="Hair design"></figure>
+  <figure class="reveal"><img data-g="ANWiy9RK--2INfYuIzYas2SbFKeyRChXisvE0sEuUzkUnbdPufuZd0TBbDsF9COLZRyxj9MMj-LO8SBdtqpSZBb7j-cu_5hyjyg81RBRtELKoSdZvqQlYfINf4w6NzfRBaEK_P_IRj95bRC-Lyhm" alt="Hair design"></figure>
+  <figure class="reveal"><img data-g="ANWiy9S7nA5upkKHBM9QeOe9iBbM0-uYIDxSLhKdlNyaNHyxGOApypt26HQTZA-_gemSXW6mZ4jVJcsDdWUvsB-CNI83z7fL--CSesQcIsNDefe_7PEBhaMbBxyOBJPydrUZu2AHU_pNGCv8WDqu" alt="Hair design"></figure>
+  <figure class="reveal"><img data-g="ANWiy9SnucC8M-sGNMpvA_-Y3BrEACFKRYTZ3kyc1P4R5Kvwn9I9Xz-A877aAPl0WU-xfYgPNUR80u9Yy9NyTmqxzNInFK7A5O0iUtkfOt6U1zc4piC56vQQSrj72K3f111dKCIj9zGJGmtQKe1r" alt="Hair design"></figure>
+ </div>
+</section>
+
+<section id="studio">
+ <div class="head reveal"><div><h2 class="h2">Inside <em>the studio</em></h2><p class="lead">Ring lights, neon and a floor you'll want to photograph. A space built for good cuts and good energy.</p></div></div>
+ <div class="bento">
+  <figure class="reveal"><img data-g="ANWiy9RJ_jVaGqCeHy9FliY4U2VupgixAm6sH_F9Ardoec6L0K-5nuW95RWfLI3NYTMROAnSzSvDjbRfM2hqzfPCqM9jjxSZ3yCVIQOu4u0t5PRgJb7pWm_QFvFjGvn6cxjvwDjc4ggVtB-ix-4" data-w="1200" data-h="1200" alt="The studio"><figcaption>The floor</figcaption></figure>
+  <figure class="reveal"><img data-g="ANWiy9SNek7FbPJJJvVNzhTjYbzteUNnvsKFBn-E0nqaXilTgDCoHl0rgrh0-RZ2MAvZlXsNMmZFaNCFjWfG_nRaXBW5rRLUMiYTI5mF2vDuR6Qckfg08B9P973jokztNPtL_9hA60JB" alt="Barbers at work"><figcaption>At work</figcaption></figure>
+  <figure class="reveal"><img data-g="ANWiy9Q7bWGaPwHidJDhSK_TMIqVH1OZuuqBlj18mlo8dFrUVOa8WqX74mBfXprNkxYcbyLZNXoGbDMT6dl5d0UxrPF1i3aPOtze7gwTpZgH0MQtxvjZh-xSjkyqjPokBZmy-9zp_YuT" alt="Beard service"><figcaption>Beard detail</figcaption></figure>
+  <figure class="reveal"><img data-g="ANWiy9QDohlYyKcgbR0l1Co_GaHbD-5KAGs7F1ljI0UCxpvn5G9mxzc97LFjV3ya9BMllIZAWY1Ko5V5R71V_OGuVBiyQgaoWf3vJDe0Et4_END0nlcY3O190FF94tpoY3Ei0tn4JFzh" alt="Studio interior"><figcaption>The chairs</figcaption></figure>
+  <div class="txt reveal"><b>Kids, regulars &amp; first-timers.</b><p>Families bring the whole crew. Patient barbers, every age welcome.</p></div>
+ </div>
+</section>
+
+<section id="services" style="padding-top:0">
+ <h2 class="h2 reveal">What we <em>do</em></h2>
+ <div class="svc">
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>Haircuts</h3><p>Classic or modern, cut to suit you.</p></div>
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16h12M8 12h8M10 8h4"/></svg></div><h3>Fades &amp; Tapers</h3><p>Skin, low, mid or high, blended clean.</p></div>
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></div><h3>Hair Designs</h3><p>Lines, shapes and freestyle art.</p></div>
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21 15 9M15 9l3-3 3 3-3 3M15 9l3 3"/></svg></div><h3>Straight Razor</h3><p>Crisp line-ups and razor detail.</p></div>
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 4c0 6 2 9 5 9s5-3 5-9M7 13c0 4 2 7 5 7s5-3 5-7"/></svg></div><h3>Beard Work</h3><p>Trimmed, shaped and lined up.</p></div>
+  <div class="s reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21c1-4 4-6 7-6s6 2 7 6"/></svg></div><h3>Kids Cuts</h3><p>Patient, precise cuts for little ones.</p></div>
+ </div>
+ <p class="note reveal">See current prices and open times when you book.</p>
+</section>
+
+<div class="book reveal">
+ <div><h2>Your next fresh cut is two taps away.</h2><p>Pick your barber and a time that works. Open late on weekdays, and on weekends too.</p>
+  <ul class="chk"><li>Appointments guaranteed</li><li>Walk-ins always welcome</li><li>Open 7 days a week</li></ul></div>
+ <a class="btn" href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book on Squire →</a>
+</div>
+
+<section>
+ <h2 class="h2 reveal">1,000+ reviews. <em>4.9 stars.</em></h2><p class="lead reveal">Here's what people are saying on Google.</p>
+ <div class="revs">
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“Real barbershop experience the way it's supposed to be. "E" had me looking right from the moment I sat in the chair. Clean fade, sharp line-up, and the straight razor work was on point.”</p><div class="who"><b>G</b>Google review</div></div>
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“I have had an amazing experience with devin! I have been going to him for over a year and he is very attentive and consistent with my haircuts.”</p><div class="who"><b>G</b>Google review</div></div>
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“Barbershop is very welcoming and relaxing. Kids and I get cut by EJ.”</p><div class="who"><b>G</b>Google review</div></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Pull <em>up</em></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="hrs" id="hrs"></div>
+   <div class="li"><b>Address</b>9400 Perrin Beitel #102, San Antonio, TX 78217</div>
+   <div class="li"><b>Phone</b><a href="tel:+12102777965">+1 210-277-7965</a></div>
+   <div class="ctas"><a class="btn" href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book now</a><a class="btn ghost" href="https://maps.google.com/?q=Slicks%20Barber%20Studio%209400%20Perrin%20Beitel%20%23102%20San%20Antonio%20TX%2078217">Directions</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Slicks%20Barber%20Studio%209400%20Perrin%20Beitel%20%23102%20San%20Antonio%20TX%2078217&output=embed"></iframe></div>
+ </div>
+</section>
+
+<footer><span>© Slicks Barber Studio · San Antonio, Texas</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://getsquire.com/discover/barbershop/slicks-barber-studio-san-antonio">Book</a><a href="tel:+12102777965">Call</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src='https://lh3.googleusercontent.com/gps-cs-s/'+e.dataset.g+'=w'+(e.dataset.w||700)+'-h'+(e.dataset.h||1000)+'-k-no'});
+var hx=document.getElementById('hex'),p='',R=46,W=R*Math.sqrt(3);
+for(var r=0;r<7;r++){for(var c=0;c<9;c++){var x=c*W+(r%2?W/2:0),y=r*R*1.5,d='M';for(var k=0;k<6;k++){var a=Math.PI/180*(60*k-30);d+=(x+R*Math.cos(a)).toFixed(1)+' '+(y+R*Math.sin(a)).toFixed(1)+(k<5?' L':' Z')}p+='<path d="'+d+'" style="animation-delay:'+((r*9+c)%7*0.6).toFixed(1)+'s"/>'}}
+hx.innerHTML=p;
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+document.querySelectorAll('[data-count]').forEach(function(el){var t=+el.dataset.count,n=0,st=Math.ceil(t/50);var iv=setInterval(function(){n=Math.min(t,n+st);el.textContent=n.toLocaleString();if(n>=t)clearInterval(iv)},28)});
+function sl(d){document.getElementById('reels').scrollBy({left:d*276,behavior:'smooth'})}
+var lb=document.getElementById('lb');
+document.querySelectorAll('.reel,.dgrid figure,.bento figure').forEach(function(f){f.onclick=function(){var i=f.querySelector('img');if(!i)return;lb.querySelector('img').src=i.src.replace(/=w\d+-h\d+/,'=w1400-h1800');lb.classList.add('on')}});
+lb.onclick=function(){lb.classList.remove('on')};
+var H={0:[8,20],1:[9,21],2:[9,21],3:[9,21],4:[9,21],5:[9,21],6:[8,20]},D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+function f12(h){return ((h+11)%12+1)+(h>=12?'pm':'am')}
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})),d=n.getDay(),h=n.getHours()+n.getMinutes()/60;
+var t='';[1,2,3,4,5,6,0].forEach(function(i){t+='<div'+(i===d?' class="td"':'')+'><span>'+D[i]+'</span><span>'+f12(H[i][0])+' – '+f12(H[i][1])+'</span></div>'});
+document.getElementById('hrs').innerHTML=t;
+var o=h>=H[d][0]&&h<H[d][1],st=document.getElementById('status');
+if(o){st.classList.add('o');st.lastChild.textContent='Open now · until '+f12(H[d][1])+' tonight'}else{st.lastChild.textContent='Closed now · opens '+(h<H[d][0]?'today at '+f12(H[d][0]):'tomorrow at '+f12(H[(d+1)%7][0]))}
+</script></body></html>
