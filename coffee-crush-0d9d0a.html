@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Coffee Crush · Eatery &amp; Bar · San Antonio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f2;--ink:#1d2433;--blue:#1f4fa3;--blue2:#e8eefb;--sun:#f5b82e;--muted:rgba(29,36,51,.62);--line:rgba(29,36,51,.12);--card:#fff}
+body.night{--bg:#121a2e;--ink:#f3eee4;--blue:#9db8ff;--blue2:#1b2742;--sun:#ff8fb1;--muted:rgba(243,238,228,.65);--line:rgba(255,255,255,.12);--card:#18223a}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:clip;transition:background .6s,color .6s}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--blue);color:#fff;text-align:center;font-size:13px;font-weight:500;padding:7px 12px}
+body.night .demo{color:#121a2e}
+.tiles{height:16px;background:conic-gradient(from 45deg,var(--blue) 25%,transparent 0 50%,var(--blue) 0 75%,transparent 0) 0 0/16px 16px;opacity:.85}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-family:'DM Serif Display';font-size:28px;color:var(--blue)}.logo i{font-style:italic;color:var(--sun)}
+nav{display:flex;align-items:center}nav a{margin-left:22px;font-weight:500;font-size:14.5px}nav a:hover{color:var(--blue)}
+.tog{margin-left:22px;display:flex;align-items:center;gap:8px;background:var(--blue2);border:1px solid var(--line);border-radius:999px;padding:4px;cursor:pointer;font:500 13px 'DM Sans'}
+.tog span{padding:6px 12px;border-radius:999px;transition:.3s;color:var(--muted)}
+body:not(.night) .tog .d,body.night .tog .n{background:var(--blue);color:#fff}body.night .tog .n{color:#121a2e}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:700;padding:14px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-size:15px}
+body.night .btn{color:#121a2e}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(31,79,163,.3)}.btn.o{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:70px 5vw 80px;position:relative}
+.kick{font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12.5px;color:var(--blue)}
+.hero h1{font-family:'DM Serif Display';font-weight:400;font-size:clamp(46px,6.6vw,90px);line-height:1.02;margin:16px 0}
+.hero h1 i{color:var(--sun)}
+.swap{display:inline-block;position:relative}
+.hero p{font-size:18px;color:var(--muted);max-width:480px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.meta{display:flex;gap:24px;margin-top:30px;flex-wrap:wrap;font-size:14px;color:var(--muted)}.meta b{color:var(--ink);font-size:20px;display:block;font-family:'DM Serif Display';font-weight:400}
+.arch{position:relative;justify-self:center;width:min(460px,100%);aspect-ratio:4/5}
+.arch .a{position:absolute;inset:0;border-radius:240px 240px 24px 24px;overflow:hidden;border:10px solid var(--card);box-shadow:0 30px 60px rgba(0,0,0,.15)}
+.arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1s}
+.arch .nt{opacity:0}body.night .arch .nt{opacity:1}
+.lamp{position:absolute;top:-30px;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff7cf,var(--sun));box-shadow:0 0 40px var(--sun);animation:sw 4s ease-in-out infinite;transform-origin:50% -60px}
+.lamp::before{content:'';position:absolute;left:50%;top:-60px;width:2px;height:60px;background:var(--muted)}
+.l1{left:-20px}.l2{right:30px;top:-10px;animation-delay:1s;width:44px;height:44px}
+@keyframes sw{50%{transform:rotate(6deg)}}
+.badge{position:absolute;left:-26px;bottom:40px;background:var(--card);border-radius:18px;padding:14px 18px;box-shadow:0 14px 30px rgba(0,0,0,.12);font-weight:700}
+.badge small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+section{padding:96px 5vw}
+.h2{font-family:'DM Serif Display';font-weight:400;font-size:clamp(34px,4.6vw,58px);line-height:1.08}.h2 i{color:var(--sun)}
+.lead{color:var(--muted);margin-top:12px;max-width:560px}
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.it{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.it:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.it .ph{aspect-ratio:1;overflow:hidden}.it img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.it:hover img{transform:scale(1.07)}
+.it .bd{padding:16px 18px}.it h3{font-family:'DM Serif Display';font-weight:400;font-size:21px}.it p{font-size:14px;color:var(--muted)}
+.set{display:none}.set.on{display:contents}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;background:var(--blue2);border-block:1px solid var(--line)}
+.split .ph{display:grid;grid-template-columns:1fr 1fr;gap:12px}.split .ph img{width:100%;height:240px;object-fit:cover;border-radius:20px}.split .ph img:first-child{grid-column:span 2;height:300px}
+ul.chk{list-style:none;margin-top:20px}ul.chk li{margin:10px 0;font-weight:500}ul.chk li::before{content:'✿';color:var(--sun);margin-right:10px}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;margin-top:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+input,select{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;background:var(--bg);color:var(--ink)}input:focus,select:focus{outline:none;border-color:var(--blue)}
+form .btn{margin-top:18px;width:100%}
+.ok{display:none;margin-top:12px;background:var(--blue2);border-radius:12px;padding:12px;font-size:14px;font-weight:500}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px}
+.rv .s{color:var(--sun);letter-spacing:3px}.rv p{margin:12px 0;font-size:16px}.rv small{color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px}
+.big{font-family:'DM Serif Display';font-size:40px;color:var(--blue);line-height:1.1}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:960px){nav a{display:none}.hero,.split,.visit{grid-template-columns:1fr}.hero{padding:44px 16px 60px}section{padding:72px 16px}header{padding:12px 16px}
+.menu{grid-template-columns:1fr 1fr}.revs{grid-template-columns:1fr}.arch{width:min(360px,88%)}.badge{left:-6px}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:1px solid var(--line)}.mbar a{text-align:center;padding:14px;font-weight:700;background:var(--card)}.mbar a:first-child{background:var(--blue);color:#fff}body{padding-bottom:52px}}
+@media(max-width:520px){.row{grid-template-columns:1fr}.it .bd{padding:12px}.it h3{font-size:18px}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Coffee Crush website</div>
+<div class="tiles"></div>
+<header><a class="logo" href="#">Coffee <i>Crush</i></a><nav><a href="#menu">Menu</a><a href="#events">Events</a><a href="#visit">Visit</a><button class="tog" id="tog" aria-label="Day or night menu"><span class="d">☀ Day</span><span class="n">☾ Night</span></button></nav></header>
+
+<div class="hero">
+ <div><span class="kick">Local eatery &amp; bar · Bulverde Rd</span>
+  <h1><span id="hl">Coffee, brunch &amp; good company.</span></h1>
+  <p id="hp">Handcrafted coffee, fresh pastries and brunch favorites in a bright, boho space with plenty of tables. Open every day from 7am to 8pm.</p>
+  <div class="ctas"><a class="btn" href="#menu">See the menu</a><a class="btn o" href="#events">Plan an event</a></div>
+  <div class="meta"><div><b>4.5★</b>648 Google reviews</div><div><b>15.9k</b>on Instagram</div><div><b>7–8</b>open every day</div></div></div>
+ <div class="arch reveal"><span class="lamp l1"></span><span class="lamp l2"></span>
+  <div class="a"><img data-g="/img-coffee-crush-s1.webp" alt="Inside Coffee Crush"><img class="nt" data-g="/img-coffee-crush-s6.webp" alt="Espresso martinis"></div>
+  <div class="badge" id="bd">Tiramisu latte<small>a reviewer favorite</small></div></div>
+</div>
+
+<section id="menu" style="padding-top:30px">
+ <h2 class="h2 reveal" id="mh">The <i>daytime</i> menu</h2><p class="lead reveal" id="ml">Flip the switch at the top to see the evening side: cocktails and espresso martinis.</p>
+ <div class="menu">
+  <div class="set on" id="day">
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s4.webp" alt=""></div><div class="bd"><h3>Specialty lattes</h3><p>Tiramisu, horchata and seasonal favorites</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s10.webp" alt=""></div><div class="bd"><h3>Avocado toast</h3><p>A guest favorite, topped with an egg</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s11.webp" alt=""></div><div class="bd"><h3>Chilaquiles</h3><p>Hearty brunch, done right</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s5.webp" alt=""></div><div class="bd"><h3>Shakerato &amp; iced</h3><p>Espressino con panna, shakerato and more</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s9.webp" alt=""></div><div class="bd"><h3>Breakfast plates</h3><p>Omelettes and morning classics</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s12.webp" alt=""></div><div class="bd"><h3>Fresh bowls</h3><p>Fruit, granola and good mornings</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s14.webp" alt=""></div><div class="bd"><h3>Bagels &amp; bites</h3><p>Quick, warm and satisfying</p></div></div>
+   <div class="it reveal"><div class="ph"><img data-g="/img-coffee-crush-s15.webp" alt=""></div><div class="bd"><h3>Pastries</h3><p>Danishes, churros and more, baked daily</p></div></div>
+  </div>
+  <div class="set" id="night">
+   <div class="it"><div class="ph"><img data-g="/img-coffee-crush-s6.webp" alt=""></div><div class="bd"><h3>Espresso martinis</h3><p>The evening order</p></div></div>
+   <div class="it"><div class="ph"><img data-g="/img-coffee-crush-s7.webp" alt=""></div><div class="bd"><h3>House cocktails</h3><p>Bright, fruity and made to toast</p></div></div>
+   <div class="it"><div class="ph"><img data-g="/img-coffee-crush-s8.webp" alt=""></div><div class="bd"><h3>Night caps</h3><p>Coffee-forward drinks after dark</p></div></div>
+   <div class="it"><div class="ph"><img data-g="/img-coffee-crush-s2.webp" alt=""></div><div class="bd"><h3>The space</h3><p>Pendant lights on, friends in</p></div></div>
+  </div>
+ </div>
+ <p class="lead reveal" style="font-size:14px">Ask at the counter for today's full menu and prices.</p>
+</section>
+
+<section class="split" id="events">
+ <div class="ph reveal"><img data-g="/img-coffee-crush-s3.webp" alt=""><img data-g="/img-coffee-crush-s2.webp" alt=""><img data-g="/img-coffee-crush-s13.webp" alt=""></div>
+ <div class="reveal"><h2 class="h2">Celebrate at <i>Crush</i></h2><p class="lead">The inside is huge, so bring everyone. Showers, birthdays, team brunches and Saturday meetups.</p>
+  <ul class="chk"><li>Group brunch reservations</li><li>Baby &amp; bridal showers</li><li>Coffee and pastry trays to go</li></ul>
+  <form id="cf"><div class="row"><div><label>Name</label><input required></div><div><label>Phone</label><input required></div></div>
+   <div class="row"><div><label>Date</label><input type="date" required></div><div><label>Guests</label><select><option>Under 10</option><option>10–25</option><option>25–50</option><option>50+</option></select></div></div>
+   <button class="btn" type="submit">Request a booking</button><div class="ok" id="ok">✿ Demo only: on the live site this request goes straight to Coffee Crush.</div></form></div>
+</section>
+
+<section>
+ <h2 class="h2 reveal">Our guests say it <i>best</i></h2>
+ <div class="revs">
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Absolutely LOVING Coffee Crush, our new fav SA find! The inside is huge and we have never had a problem finding a table.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“My favorite Saturday morning meeting up place with my friend! The staff is always very friendly and the food is always great! BUT their drinks are the absolute BEST!”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“The atmosphere was beautiful, very bright, clean, and good energy. The service was fast and employees were very sweet.”</p><small>Google review</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Come <i>sit</i> a while</h2>
+ <div class="visit">
+  <div class="card reveal"><div class="big">7am – 8pm</div><p style="font-weight:700">Open every day</p>
+   <div class="li"><b>Address</b>18010 Bulverde Rd #109, San Antonio, TX 78259</div>
+   <div class="li"><b>Phone</b><a href="tel:+12104659719">+1 210-465-9719</a></div>
+   <div class="ctas"><a class="btn" href="https://maps.google.com/?q=Coffee%20Crush%2018010%20Bulverde%20Rd%20San%20Antonio">Directions</a><a class="btn o" href="https://www.instagram.com/coffeecrushsatx/">Instagram</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Coffee%20Crush%2018010%20Bulverde%20Rd%20San%20Antonio&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© Coffee Crush · San Antonio, Texas</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="tel:+12104659719">Call</a><a href="https://maps.google.com/?q=Coffee%20Crush%2018010%20Bulverde%20Rd%20San%20Antonio">Directions</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+function setMode(n){document.body.classList.toggle('night',n);document.getElementById('day').classList.toggle('on',!n);document.getElementById('night').classList.toggle('on',n);
+document.getElementById('hl').innerHTML=n?'Cocktails, espresso martinis &amp; <i>golden hour.</i>':'Coffee, brunch &amp; good company.';
+document.getElementById('hp').textContent=n?'As the sun goes down, the espresso machine meets the bar. Toast with friends until 8pm, every day.':'Handcrafted coffee, fresh pastries and brunch favorites in a bright, boho space with plenty of tables. Open every day from 7am to 8pm.';
+document.getElementById('mh').innerHTML=n?'The <i>evening</i> menu':'The <i>daytime</i> menu';document.getElementById('bd').innerHTML=n?'Espresso martinis<small>the evening favorite</small>':'Tiramisu latte<small>a reviewer favorite</small>'}
+document.getElementById('tog').onclick=function(){setMode(!document.body.classList.contains('night'))};
+var h=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})).getHours();if(h>=17||h<6)setMode(true);
+document.getElementById('cf').onsubmit=function(e){e.preventDefault();document.getElementById('ok').style.display='block'};
+</script></body></html>

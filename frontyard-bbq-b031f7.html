@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TX Front Yard BBQ · San Antonio</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--bg2:#141414;--ink:#f4f4f0;--lime:#a6ff1a;--lime2:#7bd300;--orange:#ff7a1a;--muted:rgba(244,244,240,.62);--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--lime);color:#111;text-align:center;font-size:13px;font-weight:700;padding:7px 12px}
+.status{display:flex;justify-content:center;gap:10px;align-items:center;font-size:13.5px;font-weight:600;padding:8px;background:#111;border-bottom:1px solid var(--line)}
+.status i{width:8px;height:8px;border-radius:50%;background:#777}.status.o i{background:var(--lime);box-shadow:0 0 10px var(--lime);animation:bl 1.4s infinite}@keyframes bl{50%{opacity:.3}}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-family:'Archivo Black';font-size:22px;letter-spacing:.5px}.logo b{color:var(--lime);font-weight:400}
+nav a{margin-left:24px;font-weight:600;font-size:14px;color:var(--muted)}nav a:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:#0a0a0a;font-weight:800;padding:14px 26px;border-radius:10px;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-size:15px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(166,255,26,.25),0 12px 30px rgba(166,255,26,.25)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}.btn.ghost:hover{border-color:var(--lime);box-shadow:none}
+.hero{position:relative;min-height:88vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:60px 5vw;overflow:hidden}
+.hero h1{font-family:'Archivo Black';font-weight:400;font-size:clamp(46px,7vw,100px);line-height:.95;text-transform:uppercase}
+.hero h1 span{display:block}.hero h1 .l{color:var(--lime);text-shadow:0 0 30px rgba(166,255,26,.35)}
+.hero h1 span{opacity:0;transform:translateY(40px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}.hero h1 span:nth-child(2){animation-delay:.15s}.hero h1 span:nth-child(3){animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}
+.hero p{color:var(--muted);font-size:18px;max-width:480px;margin:22px 0 30px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.chip{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:600}.chip b{color:var(--lime)}
+.stack{position:relative;height:560px}
+.stack figure{position:absolute;border-radius:18px;overflow:hidden;border:3px solid #0a0a0a;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.stack img{width:100%;height:100%;object-fit:cover}
+.f1{width:62%;height:70%;left:0;top:4%;transform:rotate(-4deg);animation:fl1 6s ease-in-out infinite}
+.f2{width:52%;height:52%;right:0;top:0;transform:rotate(5deg);animation:fl2 7s ease-in-out infinite}
+.f3{width:50%;height:48%;right:6%;bottom:0;transform:rotate(-2deg);animation:fl1 8s ease-in-out infinite reverse;z-index:2}
+@keyframes fl1{50%{transform:rotate(-2deg) translateY(-12px)}}@keyframes fl2{50%{transform:rotate(3deg) translateY(10px)}}
+.smoke{position:absolute;inset:0;pointer-events:none;z-index:3}
+.smoke i{position:absolute;bottom:-60px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);filter:blur(6px);animation:smk 7s linear infinite}
+@keyframes smk{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(-640px) scale(2.2);opacity:0}}
+.tape{background:var(--lime);color:#0a0a0a;overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.2deg);margin:0 -2vw}
+.tape div{display:inline-block;font-family:'Archivo Black';font-size:24px;animation:mq 24s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:100px 5vw}
+.h2{font-family:'Archivo Black';font-weight:400;font-size:clamp(34px,4.6vw,60px);line-height:1;text-transform:uppercase}.h2 em{font-style:normal;color:var(--lime)}
+.lead{color:var(--muted);margin-top:12px;max-width:560px}
+.fav{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.bars{margin-top:30px}
+.bar{margin:18px 0}.bar div{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}.bar div span{color:var(--muted);font-weight:600;font-size:14px}
+.bar s{display:block;height:14px;border-radius:8px;background:#1d1d1d;overflow:hidden;text-decoration:none}
+.bar s i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--lime2),var(--lime));border-radius:8px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:170px;gap:10px}
+.mosaic figure{border-radius:14px;overflow:hidden;cursor:zoom-in;position:relative}
+.mosaic figure:nth-child(1){grid-row:span 2}.mosaic figure:nth-child(4){grid-column:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.mosaic figure:hover img{transform:scale(1.08)}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:rgba(10,10,10,.8);font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:6px}
+.board{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;background:var(--bg2);border-block:1px solid var(--line)}
+.board .ph{border-radius:20px;overflow:hidden;border:2px solid var(--lime);box-shadow:0 0 40px rgba(166,255,26,.15);cursor:zoom-in;max-height:620px}
+.board .ph img{width:100%;height:100%;object-fit:cover}
+.mlist{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mlist div{background:#0d0d0d;border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:border-color .3s,transform .3s}
+.mlist div:hover{border-color:var(--lime);transform:translateY(-3px)}.mlist b{display:block}.mlist span{color:var(--muted);font-size:14px}
+.cater{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.cater .pic{border-radius:22px;overflow:hidden;height:100%;min-height:420px;position:relative}
+.cater .pic img{width:100%;height:100%;object-fit:cover}
+.cater .pic span{position:absolute;left:18px;top:18px;background:var(--lime);color:#0a0a0a;font-weight:800;padding:8px 14px;border-radius:8px;font-size:14px}
+form{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:30px}
+form h3{font-family:'Archivo Black';font-weight:400;font-size:26px;text-transform:uppercase}
+form p{color:var(--muted);font-size:14.5px;margin:6px 0 18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+input,select,textarea{width:100%;background:#0b0b0b;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:12px 14px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lime)}
+form .btn{margin-top:18px;width:100%;justify-content:center}
+.ok{display:none;margin-top:14px;background:rgba(166,255,26,.12);border:1px solid var(--lime);border-radius:12px;padding:14px;font-size:14.5px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;overflow:hidden}
+.rv::after{content:'';position:absolute;left:0;top:0;width:4px;height:100%;background:var(--lime)}
+.rv .st{color:var(--lime);letter-spacing:3px}.rv p{margin:12px 0}.rv small{color:var(--muted)}
+.ig{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:0 5vw;padding:40px;border-radius:24px;background:linear-gradient(120deg,#1a2a00,#0f0f0f 60%);border:1px solid rgba(166,255,26,.3)}
+.ig b{font-family:'Archivo Black';font-size:clamp(40px,6vw,72px);color:var(--lime);line-height:1;font-weight:400}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:30px}
+.hrs div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}.hrs div span:last-child{color:var(--muted)}
+.hrs div.td{color:var(--lime);font-weight:700}.hrs div.td span:last-child{color:var(--lime)}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:380px}.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.6)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:28px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:20px}.lb.on{display:flex}.lb img{max-height:90vh;border-radius:12px}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.fav,.board,.cater,.visit{grid-template-columns:1fr}.hero{padding:40px 16px 60px;min-height:auto}.stack{height:420px}
+section{padding:76px 16px}header{padding:12px 16px}.revs{grid-template-columns:1fr}.ig{margin:0 16px;padding:28px}.cater .pic{min-height:280px}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:1px solid var(--line);background:#111}.mbar a{text-align:center;padding:15px;font-weight:800}.mbar a:first-child{background:var(--lime);color:#0a0a0a}body{padding-bottom:54px}}
+@media(max-width:520px){nav .btn{display:none}.row,.mlist{grid-template-columns:1fr}.mosaic{grid-template-columns:1fr 1fr}.mosaic figure:nth-child(4){grid-column:auto}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official TX Front Yard BBQ website</div>
+<div class="status" id="status"><i></i><span>Open Tue–Sun · 12pm–9pm</span></div>
+<header><a class="logo" href="#">FRONT YARD <b>BBQ</b></a><nav><a href="#favorites">Favorites</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#visit">Visit</a><a class="btn" style="padding:9px 18px;margin-left:22px" href="#catering">Book catering</a></nav></header>
+
+<div class="hero">
+ <div><h1><span>Turkey legs.</span><span class="l">Loaded potatoes.</span><span>Seafood.</span></h1>
+  <p>San Antonio's most talked-about food truck on Marbach Rd. Huge portions, smoked turkey legs and plates you'll be posting before you take a bite.</p>
+  <div class="ctas"><a class="btn" href="#menu">See the menu</a><a class="btn ghost" href="tel:+12108521582">Call 210-852-1582</a></div>
+  <div class="chips"><span class="chip"><b>130k</b> on Instagram</span><span class="chip"><b>4.4★</b> 522 Google reviews</span><span class="chip">Catering available</span></div></div>
+ <div class="stack">
+  <figure class="f1"><img data-g="/img-frontyard-bbq-s1.webp" alt="Buffalo turkey plate"></figure>
+  <figure class="f2"><img data-g="/img-frontyard-bbq-s2.webp" alt="Turkey leg loaded"></figure>
+  <figure class="f3"><img data-g="/img-frontyard-bbq-s4.webp" alt="Shrimp mac bowl"></figure>
+  <div class="smoke" id="smoke"></div>
+ </div>
+</div>
+
+<div class="tape"><div>SMOKED TURKEY LEGS ✦ LOADED BAKED POTATOES ✦ SHRIMP ✦ MAC ATTACK ✦ SEAFOOD PLATTERS ✦ AGUAS FRESCAS ✦ SMOKED TURKEY LEGS ✦ LOADED BAKED POTATOES ✦ SHRIMP ✦ MAC ATTACK ✦ SEAFOOD PLATTERS ✦ AGUAS FRESCAS ✦&nbsp;</div></div>
+
+<section id="favorites">
+ <div class="fav">
+  <div class="reveal"><h2 class="h2">What everyone <em>orders</em></h2><p class="lead">Straight from Google reviews: the dishes people mention most.</p>
+   <div class="bars" id="bars">
+    <div class="bar"><div>Turkey legs<span>102 mentions</span></div><s><i data-w="100"></i></s></div>
+    <div class="bar"><div>Shrimp<span>47 mentions</span></div><s><i data-w="46"></i></s></div>
+    <div class="bar"><div>Baked potato<span>35 mentions</span></div><s><i data-w="34"></i></s></div>
+    <div class="bar"><div>Mac &amp; cheese<span>15 mentions</span></div><s><i data-w="15"></i></s></div>
+   </div></div>
+  <div class="mosaic">
+   <figure class="reveal"><img data-g="/img-frontyard-bbq-s12.webp" alt="Turkey leg"><figcaption>Smoked turkey leg</figcaption></figure>
+   <figure class="reveal"><img data-g="/img-frontyard-bbq-s3.webp" alt="Loaded baked potato"><figcaption>Loaded potato</figcaption></figure>
+   <figure class="reveal"><img data-g="/img-frontyard-bbq-s6.webp" alt="Shrimp alfredo"><figcaption>Shrimp alfredo</figcaption></figure>
+   <figure class="reveal"><img data-g="/img-frontyard-bbq-s8.webp" alt="Seafood"><figcaption>Seafood platter</figcaption></figure>
+   <figure class="reveal"><img data-g="/img-frontyard-bbq-s13.webp" alt="Shrimp bowl"><figcaption>Shrimp bowl</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="board" id="menu">
+ <div class="ph reveal" data-lb><img data-g="/img-frontyard-bbq-s14.webp" alt="Front Yard BBQ menu board"></div>
+ <div class="reveal"><h2 class="h2">The <em>board</em></h2><p class="lead">Tap the board to read it up close. Online, this becomes a full menu that shows up on Google when people search "turkey legs near me".</p>
+  <div class="mlist">
+   <div><b>Smoked Turkey Legs</b><span>Classic, spicy or lemon pepper</span></div>
+   <div><b>Loaded Baked Potatoes</b><span>Piled high with turkey</span></div>
+   <div><b>Mac Attack</b><span>Mac &amp; cheese, turkey, shrimp</span></div>
+   <div><b>Seafood Plates</b><span>Shrimp and seafood favorites</span></div>
+   <div><b>Alfredo &amp; Secret Sauce</b><span>Ask for it on anything</span></div>
+   <div><b>Aguas Frescas</b><span>The perfect pairing</span></div>
+  </div>
+  <p class="lead" style="font-size:14px">Prices on the board at the truck.</p></div>
+</section>
+
+<section id="catering">
+ <h2 class="h2 reveal">Feed the <em>whole party</em></h2><p class="lead reveal">Birthdays, office lunches, game days, weddings. Tell us about your event and we'll get back to you fast.</p>
+ <div class="cater" style="margin-top:36px">
+  <div class="pic reveal"><img data-g="/img-frontyard-bbq-s11.webp" alt="Catering platter"><span>Catering available</span></div>
+  <form class="reveal" id="cf"><h3>Catering request</h3><p>Takes 30 seconds. We'll reply by phone or text.</p>
+   <div class="row"><div><label>Name</label><input required placeholder="Your name"></div><div><label>Phone</label><input required placeholder="(210) 555-0123"></div></div>
+   <div class="row"><div><label>Event date</label><input type="date" required></div><div><label>Guests</label><select><option>10–25</option><option>25–50</option><option>50–100</option><option>100+</option></select></div></div>
+   <label>Type of event</label><select><option>Birthday / family party</option><option>Office / corporate</option><option>Wedding</option><option>Truck at my event</option><option>Other</option></select>
+   <label>Anything else?</label><textarea rows="3" placeholder="Favorite dishes, location, timing..."></textarea>
+   <button class="btn" type="submit">Send request →</button>
+   <div class="ok" id="ok">✓ Demo only: on the live site this request goes straight to Front Yard BBQ's phone and inbox.</div></form>
+ </div>
+</section>
+
+<div class="ig reveal"><div><b>130,000+</b><p class="lead" style="margin-top:6px">people follow Front Yard BBQ on Instagram. Now they can find the menu, hours and catering in one link.</p></div><a class="btn" href="https://www.instagram.com/txfrontyardbbq/">Follow @txfrontyardbbq</a></div>
+
+<section>
+ <h2 class="h2 reveal">Word on <em>Marbach</em></h2>
+ <div class="revs">
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“All of the food we tried was delicious! Huge portions we had leftovers to take home. Enjoyed the smoked turkey leg.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“Very tasteful food. Everything is amazing the turkey baked potato is my favorite.”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="st">★★★★★</div><p>“Me and my boyfriend are from TN and saw this place recommended on TikTok and my oh my they did NOT disappoint. The food was phenomenal. Huge portions.”</p><small>Google review</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Pull <em>up</em></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="hrs" id="hrs"></div>
+   <div class="li"><b>Address</b>9371 Marbach Rd, San Antonio, TX 78245</div>
+   <div class="li"><b>Phone</b><a href="tel:+12108521582">+1 210-852-1582</a></div>
+   <div class="ctas" style="margin-top:20px"><a class="btn" href="https://maps.google.com/?q=Tx%20Front%20Yard%20BBQ%209371%20Marbach%20Rd%20San%20Antonio">Directions</a><a class="btn ghost" href="tel:+12108521582">Call</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Tx%20Front%20Yard%20BBQ%209371%20Marbach%20Rd%20San%20Antonio&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© TX Front Yard BBQ · San Antonio, Texas</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="#catering">Catering</a><a href="tel:+12108521582">Call</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var sm=document.getElementById('smoke');for(var i=0;i<9;i++){var p=document.createElement('i');p.style.left=(i*11)+'%';p.style.animationDelay=(i*0.8)+'s';sm.appendChild(p)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');if(x.target.querySelector('#bars'))x.target.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%'});io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var lb=document.getElementById('lb');document.querySelectorAll('.mosaic figure,[data-lb],.stack figure').forEach(function(f){f.style.cursor='zoom-in';f.onclick=function(){lb.querySelector('img').src=f.querySelector('img').src;lb.classList.add('on')}});lb.onclick=function(){lb.classList.remove('on')};
+document.getElementById('cf').onsubmit=function(e){e.preventDefault();document.getElementById('ok').style.display='block'};
+var H={0:[12,21],1:null,2:[12,21],3:[12,21],4:[12,21],5:[12,21],6:[12,21]},D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,t='';
+[1,2,3,4,5,6,0].forEach(function(i){t+='<div'+(i===d?' class="td"':'')+'><span>'+D[i]+'</span><span>'+(H[i]?'12pm – 9pm':'Closed')+'</span></div>'});document.getElementById('hrs').innerHTML=t;
+var st=document.getElementById('status');if(H[d]&&h>=12&&h<21){st.classList.add('o');st.lastChild.textContent='Open now · serving until 9pm'}else{st.lastChild.textContent='Closed now · '+((d===0&&h>=21)||d===1?'back Tuesday at 12pm':(H[d]&&h<12?'opens today at 12pm':'opens tomorrow at 12pm'))}
+</script></body></html>
