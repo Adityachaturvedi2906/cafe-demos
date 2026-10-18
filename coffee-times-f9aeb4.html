@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Coffee Times Drive-Thru Espresso · Tucson</title>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sky1:#ff7e5f;--sky2:#feb47b;--navy:#16325c;--red:#d7263d;--cream:#fff8ef;--ink:#1d2433;--teal:#2bb3a3;--muted:rgba(29,36,51,.64);--line:rgba(29,36,51,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--navy);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:rgba(255,248,239,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--navy)}
+.logo{font-family:Ultra;font-size:22px;color:var(--navy);letter-spacing:1px}.logo span{color:var(--red)}
+nav a{margin-left:22px;font-weight:700;font-size:14.5px}nav a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;padding:14px 26px;border-radius:10px;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-size:15px;box-shadow:0 4px 0 #9e1a2c}
+.btn:hover{transform:translateY(-2px)}.btn.n{background:var(--navy);box-shadow:0 4px 0 #0b1c36}
+.hero{position:relative;min-height:84vh;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:60px 5vw 140px;overflow:hidden;background:linear-gradient(180deg,#ffd6a5 0%,var(--sky2) 40%,var(--sky1) 75%,#c74d6b 100%)}
+.hero .sun{position:absolute;right:12%;top:12%;width:150px;height:150px;border-radius:50%;background:#fff3c4;box-shadow:0 0 80px #fff3c4;opacity:.85}
+.cactus{position:absolute;bottom:60px;width:26px;height:120px;background:#2f5d3a;border-radius:13px}
+.cactus::before,.cactus::after{content:'';position:absolute;width:16px;height:50px;background:#2f5d3a;border-radius:8px}
+.cactus::before{left:-18px;top:30px;border-bottom-right-radius:0}.cactus::after{right:-18px;top:14px}
+.c1{left:6%}.c2{left:46%;height:90px;transform:scale(.8)}.c3{right:5%;height:140px}
+.road{position:absolute;left:0;right:0;bottom:0;height:70px;background:#3a3a44}
+.road::after{content:'';position:absolute;left:0;right:0;top:32px;height:6px;background:repeating-linear-gradient(90deg,#ffd166 0 40px,transparent 40px 80px);animation:road 1.2s linear infinite}
+@keyframes road{to{background-position:-80px 0}}
+.car{position:absolute;bottom:38px;left:-200px;font-size:54px;animation:drive 10s linear infinite;transform:scaleX(-1)}
+@keyframes drive{0%{left:-140px}45%,55%{left:44%}100%{left:110%}}
+.hero>div{position:relative;z-index:2}
+.badge{display:inline-block;background:var(--navy);color:#fff;font-weight:800;letter-spacing:2px;font-size:12.5px;padding:6px 14px;border-radius:6px}
+.hero h1{font-family:Ultra;font-weight:400;font-size:clamp(46px,6.8vw,92px);line-height:1;color:var(--navy);margin:16px 0}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:18px;max-width:470px;color:#3b2a2a}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.kiosk{justify-self:center;width:min(440px,100%);aspect-ratio:1;border-radius:24px;overflow:hidden;border:8px solid #fff;box-shadow:0 30px 60px rgba(0,0,0,.25);transform:rotate(-2deg)}
+.kiosk img{width:100%;height:100%;object-fit:cover}
+section{padding:96px 5vw}
+.h2{font-family:Ultra;font-weight:400;font-size:clamp(32px,4.4vw,56px);line-height:1.05;color:var(--navy)}.h2 em{font-style:normal;color:var(--red)}
+.lead{color:var(--muted);margin-top:10px;max-width:580px}
+.window{margin-top:40px;background:var(--navy);border-radius:26px;padding:16px;box-shadow:0 30px 60px rgba(22,50,92,.25)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:6px}
+.tab{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 18px;font:700 14px Inter,sans-serif;cursor:pointer}
+.tab.on{background:#fff;color:var(--navy);border-color:#fff}
+.panes{background:var(--cream);border-radius:18px;margin-top:10px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.pane-l ul{list-style:none}.pane-l li{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:2px dotted var(--line);font-weight:600}.pane-l li span{color:var(--muted);font-weight:500;font-size:14px}
+.pane-l .ct{display:inline-block;background:var(--teal);color:#fff;font-size:12px;padding:1px 8px;border-radius:999px;margin-left:6px}
+.pane-r img{width:100%;height:320px;object-fit:cover;border-radius:16px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.w{background:#fff;border:2px solid var(--navy);border-radius:18px;padding:22px;box-shadow:5px 5px 0 var(--red)}.w b{display:block;font-size:30px}.w h3{font-size:18px;margin:4px 0}.w p{font-size:14px;color:var(--muted)}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:40px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;transition:transform .4s}.strip img:hover{transform:translateY(-6px) rotate(-1deg)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rv{background:#fff;border-radius:20px;padding:24px;border-top:6px solid var(--red);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.rv:nth-child(2){border-top-color:var(--navy)}.rv:nth-child(3){border-top-color:var(--teal)}
+.rv .s{color:#f4a300;letter-spacing:3px}.rv p{margin:10px 0}.rv small{color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{background:#fff;border:2px solid var(--navy);border-radius:22px;padding:30px}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:2px solid var(--navy);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0}
+footer{background:var(--navy);color:rgba(255,255,255,.75);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;font-size:14px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.panes,.visit{grid-template-columns:1fr}.hero{padding:40px 16px 130px}section{padding:72px 16px}header{padding:10px 16px}
+.kiosk{width:min(320px,86%)}.why{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr 1fr 1fr}.revs{grid-template-columns:1fr}.pane-r img{height:220px}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:2px solid var(--navy)}.mbar a{text-align:center;padding:14px;font-weight:800;background:#fff}.mbar a:first-child{background:var(--red);color:#fff}body{padding-bottom:52px}}
+@media(max-width:520px){nav .btn{display:none}.strip{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Coffee Times website</div>
+<header><a class="logo" href="#">COFFEE <span>TIMES</span></a><nav><a href="#menu">Menu</a><a href="#why">Why us</a><a href="#visit">Find us</a><a class="btn" style="padding:8px 16px;margin-left:20px;box-shadow:none" href="tel:+15203183698">Call</a></nav></header>
+
+<div class="hero"><div class="sun"></div><span class="cactus c1"></span><span class="cactus c2"></span><span class="cactus c3"></span><div class="road"></div><div class="car">🚙</div>
+ <div><span class="badge">DRIVE-THRU · WALK-UP · SPEEDWAY BLVD</span>
+  <h1>Tucson's <span>favorite</span> drive-thru.</h1>
+  <p>Cold brew, smoothies, vegan pastries and bagels, made fast by the sweetest crew on Speedway. Roll up, order, roll out happy.</p>
+  <div class="ctas"><a class="btn" href="#menu">See the menu</a><a class="btn n" href="#visit">Directions</a></div></div>
+ <div class="kiosk reveal"><img data-g="/img-coffee-times-s1.webp" alt="Coffee Times drive-thru kiosk"></div>
+</div>
+
+<section id="menu">
+ <h2 class="h2 reveal">At the <em>window</em></h2><p class="lead reveal">Tap a category. These are the things reviewers mention most.</p>
+ <div class="window reveal">
+  <div class="tabs"><button class="tab on" data-p="0">☕ Coffee</button><button class="tab" data-p="1">🥤 Smoothies</button><button class="tab" data-p="2">🥯 Bakery</button></div>
+  <div class="panes">
+   <div class="pane-l" id="pl"></div>
+   <div class="pane-r"><img id="pimg" data-g="/img-coffee-times-s6.webp" alt=""></div>
+  </div>
+ </div>
+ <p class="lead reveal" style="font-size:14px">Full menu and prices on the boards at the window.</p>
+</section>
+
+<section id="why" style="padding-top:0">
+ <h2 class="h2 reveal">Why Tucson <em>pulls in</em></h2>
+ <div class="why">
+  <div class="w reveal"><b>⚡</b><h3>Fast</h3><p>Drive-thru or walk-up, in and out.</p></div>
+  <div class="w reveal"><b>🌱</b><h3>Vegan options</h3><p>Pastries and drinks for everyone.</p></div>
+  <div class="w reveal"><b>🐶</b><h3>Dog friendly</h3><p>Your pup gets a hello too.</p></div>
+  <div class="w reveal"><b>💛</b><h3>Local</h3><p>A Tucson original, not a chain.</p></div>
+ </div>
+ <div class="strip">
+  <img class="reveal" data-g="/img-coffee-times-s7.webp" alt=""><img class="reveal" data-g="/img-coffee-times-s9.webp" alt=""><img class="reveal" data-g="/img-coffee-times-s2.webp" alt=""><img class="reveal" data-g="/img-coffee-times-s12.webp" alt=""><img class="reveal" data-g="/img-coffee-times-s5.webp" alt="">
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <h2 class="h2 reveal">831 reviews · <em>4.7★</em></h2>
+ <div class="revs">
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“Best drive through coffee shop in Tucson!!! I strictly only drink cold brew coffee for low acidity and they make awesome cold brew!!”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“I got a 16 Oz iced vanilla oat milk latte. They use quality vanilla and barista quality oat milk. It was great!”</p><small>Google review</small></div>
+  <div class="rv reveal"><div class="s">★★★★★</div><p>“The sweetest people, truly kind and always happy to see you (and your dogs).”</p><small>Google review</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Roll <em>up</em></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="li" style="margin-top:0"><b>Address</b>3401 E Speedway Blvd, Tucson, AZ 85716</div>
+   <div class="li"><b>Phone</b><a href="tel:+15203183698">+1 520-318-3698</a></div>
+   <div class="li"><b>How to order</b>Drive-thru lane or walk-up window</div>
+   <div class="ctas" style="margin-top:18px"><a class="btn" href="https://maps.google.com/?q=Coffee%20Times%20Drive-Thru%20Espresso%203401%20E%20Speedway%20Blvd%20Tucson">Directions</a><a class="btn n" href="https://www.instagram.com/coffeetimestucson/">Instagram</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Coffee%20Times%20Drive-Thru%20Espresso%203401%20E%20Speedway%20Blvd%20Tucson&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© Coffee Times Drive-Thru Espresso · Tucson</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://maps.google.com/?q=Coffee%20Times%20Drive-Thru%20Espresso%203401%20E%20Speedway%20Blvd%20Tucson">Directions</a><a href="tel:+15203183698">Call</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var P=[['/img-coffee-times-s6.webp',[['Cold brew','low acidity, a regular favorite',14],['Dirty chai','spiced &amp; espresso',8],['Oat milk latte','hot or iced',6],['Salted caramel latte','a reviewer favorite',0],['Honey lavender latte','new on the sign',0]]],
+['/img-coffee-times-s8.webp',[['Fruit smoothies','the most-mentioned item',37],['Green smoothies','fresh &amp; bright',0],['Frappes','blended &amp; sweet',0]]],
+['/img-coffee-times-s11.webp',[['Vegan pastries','baked treats for everyone',9],['Bagels','from local bakers',0],['Cookies &amp; muffins','grab one at the window',0]]]];
+var pl=document.getElementById('pl'),pi=document.getElementById('pimg');
+function show(i){var p=P[i];pi.src=p[0];pl.innerHTML='<ul>'+p[1].map(function(x){return '<li>'+x[0]+(x[2]?'<b class="ct">'+x[2]+' mentions</b>':'')+'<span>'+x[1]+'</span></li>'}).join('')+'</ul>'}
+show(0);document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});t.classList.add('on');show(+t.dataset.p)}});
+</script></body></html>
