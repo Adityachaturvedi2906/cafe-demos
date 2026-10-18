@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Xolo Coffee · Phoenix</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e0e;--bg2:#171717;--ink:#f3efe7;--mari:#ff9f1c;--mari2:#ff7b00;--rose:#e0457b;--muted:rgba(243,239,231,.62);--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.demo{background:var(--mari);color:#111;text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+.status{text-align:center;font-size:13.5px;padding:8px;border-bottom:1px solid var(--line);font-family:'Special Elite'}
+.status.o{color:var(--mari)}
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(14,14,14,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-family:Oswald;font-weight:700;font-size:26px;letter-spacing:6px;border:2px solid var(--ink);padding:0 10px}
+nav a{margin-left:22px;font-weight:500;font-size:14.5px;color:var(--muted)}nav a:hover{color:var(--mari)}
+.btn{display:inline-block;background:var(--mari);color:#111;font-weight:700;padding:14px 26px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;font-size:14px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--mari2)}.btn.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero{position:relative;min-height:88vh;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:60px 5vw;overflow:hidden}
+#petals{position:absolute;inset:0;pointer-events:none;z-index:1}
+.petal{position:absolute;top:-30px;width:14px;height:18px;border-radius:60% 60% 50% 50%;background:var(--mari);opacity:.9;animation:drop linear infinite}
+@keyframes drop{to{transform:translateY(110vh) rotate(540deg)}}
+.hero>div{position:relative;z-index:2}
+.hero .tw{font-family:'Special Elite';color:var(--mari);font-size:18px}
+.hero h1{font-family:Oswald;font-weight:700;font-size:clamp(52px,8vw,112px);line-height:.95;text-transform:uppercase;margin:12px 0}
+.hero h1 span{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero p{color:var(--muted);font-size:18px;max-width:480px;margin-bottom:26px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.polar{position:relative;height:540px}
+.polar figure{position:absolute;background:#fff;padding:10px 10px 40px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.polar img{width:100%;height:100%;object-fit:cover}
+.polar figcaption{position:absolute;left:0;right:0;bottom:10px;text-align:center;color:#222;font-family:'Special Elite';font-size:15px}
+.polar .a{width:60%;height:72%;left:2%;top:4%;transform:rotate(-5deg)}.polar .b{width:50%;height:56%;right:0;bottom:2%;transform:rotate(4deg)}
+.polar .c{position:absolute;right:8%;top:0;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,var(--mari) 30%,var(--mari2) 31%,var(--mari) 45%,var(--mari2) 46%,var(--mari) 60%,var(--mari2) 61%);box-shadow:0 0 30px rgba(255,159,28,.5);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:96px 5vw}
+.h2{font-family:Oswald;font-weight:700;font-size:clamp(34px,4.8vw,62px);line-height:1;text-transform:uppercase}.h2 em{font-style:normal;color:var(--mari)}
+.lead{color:var(--muted);margin-top:12px;max-width:580px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:40px;align-items:start}
+.paper{background:#f3efe7;color:#1a1a1a;padding:34px;font-family:'Special Elite';box-shadow:10px 10px 0 var(--mari);position:relative}
+.paper::before{content:'XOLO';position:absolute;top:18px;right:24px;font-family:Oswald;font-weight:700;letter-spacing:5px;border:2px solid #1a1a1a;padding:0 8px;font-size:18px}
+.paper h3{font-family:Oswald;font-size:22px;letter-spacing:3px;margin:18px 0 6px;border-bottom:2px solid #1a1a1a;display:inline-block}
+.paper li{list-style:none;display:flex;justify-content:space-between;gap:10px;padding:6px 0;font-size:16px;border-bottom:1px dashed rgba(0,0,0,.2)}
+.paper li span{font-size:13px;color:#555}
+.paper .tag{display:inline-block;background:var(--rose);color:#fff;font-size:12px;padding:1px 8px;margin-left:6px;border-radius:3px;font-family:Inter;font-weight:600}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shots figure{overflow:hidden;aspect-ratio:3/4;filter:grayscale(.15);transition:filter .4s}.shots figure:hover{filter:none}
+.shots img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.shots figure:hover img{transform:scale(1.06)}
+.culture{background:var(--bg2);border-block:1px solid var(--line)}
+.wall{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:12px;margin-top:40px}
+.wall figure{position:relative;overflow:hidden;border:1px solid var(--line)}
+.wall figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.wall img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.wall figure:hover img{transform:scale(1.06)}
+.wall figcaption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.75);font-family:'Special Elite';font-size:14px;padding:4px 10px}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.vals div{border:1px solid var(--line);padding:22px;border-top:3px solid var(--mari)}.vals b{font-family:Oswald;font-size:20px;letter-spacing:1px;display:block}.vals span{color:var(--muted);font-size:14.5px}
+.revs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.rv{border:1px solid var(--line);padding:28px;position:relative}
+.rv::before{content:'✿';position:absolute;top:14px;right:18px;color:var(--mari);font-size:22px}
+.rv p{font-family:'Special Elite';font-size:17px;line-height:1.55}.rv small{display:block;margin-top:12px;color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:40px}
+.card{border:1px solid var(--line);padding:30px;background:var(--bg2)}
+.hrs div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-family:'Special Elite'}.hrs div.td{color:var(--mari)}
+.li{margin-top:14px}.li b{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.map{border:1px solid var(--line);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0;filter:grayscale(1) invert(.9)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:940px){nav a:not(.btn){display:none}.hero,.menu,.visit{grid-template-columns:1fr}.hero{padding:40px 16px 60px;min-height:auto}section{padding:72px 16px}header{padding:12px 16px}
+.polar{height:420px}.wall{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.vals,.revs{grid-template-columns:1fr}
+.mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:1px solid var(--line);background:var(--bg2)}.mbar a{text-align:center;padding:14px;font-weight:700}.mbar a:first-child{background:var(--mari);color:#111}body{padding-bottom:52px}}
+@media(max-width:520px){nav .btn{display:none}.paper{padding:24px 18px}}
+</style></head><body>
+<div class="demo">Concept demo by Aditya Chaturvedi · not the official Xolo Coffee website</div>
+<div class="status" id="status">Tue–Thu 7am–3pm · Fri–Sun 7am–4pm · Mon closed</div>
+<header><a class="logo" href="#">XOLO</a><nav><a href="#menu">Menu</a><a href="#culture">Culture</a><a href="#visit">Visit</a><a class="btn" style="padding:9px 16px;margin-left:20px" href="tel:+14807212295">Call</a></nav></header>
+
+<div class="hero"><div id="petals"></div>
+ <div><div class="tw">— coffee with cultura, on 16th Street</div>
+  <h1>Café de olla.<br><span>Pistachio.</span><br>Cold brew.</h1>
+  <p>A Phoenix coffee shop rooted in Chicano culture: homemade syrups, Mexica cold brew, banana bread, local art on the walls and great music playing.</p>
+  <div class="ctas"><a class="btn" href="#menu">See the menu</a><a class="btn o" href="#visit">Directions</a></div></div>
+ <div class="polar reveal"><figure class="a"><img data-g="/img-xolo-coffee-s2.webp" alt="Xolo iced coffee with marigolds"><figcaption>with flores</figcaption></figure><figure class="b"><img data-g="/img-xolo-coffee-s3.webp" alt="Iced coffee and banana bread"><figcaption>+ banana bread</figcaption></figure><span class="c"></span></div>
+</div>
+
+<section id="menu">
+ <h2 class="h2 reveal">El <em>menú</em></h2><p class="lead reveal">The drinks and bakes reviewers keep talking about.</p>
+ <div class="menu">
+  <div class="paper reveal">
+   <h3>DRINKS</h3><ul>
+    <li>Cold brew <span>23 mentions<b class="tag">fave</b></span></li>
+    <li>Café de olla <span>cinnamon &amp; piloncillo</span></li>
+    <li>Pistachio latte <span>homemade syrup</span></li>
+    <li>Mexica cold brew <span>house special</span></li>
+    <li>Matcha latte <span>hot or iced</span></li></ul>
+   <h3>BAKES</h3><ul>
+    <li>Banana bread <span>homemade</span></li>
+    <li>Dark chocolate treats <span>rich</span></li>
+    <li>Seasonal muffins <span>ask what's fresh</span></li></ul>
+   <p style="margin-top:16px;font-size:13px;color:#555">Full menu &amp; prices on the board in the shop.</p></div>
+  <div class="shots">
+   <figure class="reveal"><img data-g="/img-xolo-coffee-s4.webp" alt=""></figure>
+   <figure class="reveal"><img data-g="/img-xolo-coffee-s6.webp" alt=""></figure>
+   <figure class="reveal"><img data-g="/img-xolo-coffee-s5.webp" alt=""></figure>
+   <figure class="reveal"><img data-g="/img-xolo-coffee-s8.webp" alt=""></figure>
+  </div>
+ </div>
+</section>
+
+<section class="culture" id="culture">
+ <h2 class="h2 reveal">Art, music &amp; <em>cultura</em></h2><p class="lead reveal">From the outside it's a strip mall. Inside, it's local art, lowrider photography, marigolds and a playlist worth staying for.</p>
+ <div class="wall">
+  <figure class="reveal"><img data-g="/img-xolo-coffee-s10.webp" alt=""><figcaption>the lounge</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-xolo-coffee-s9.webp" alt=""><figcaption>local art</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-xolo-coffee-s12.webp" alt=""><figcaption>the machine</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-xolo-coffee-s11.webp" alt=""><figcaption>inside</figcaption></figure>
+  <figure class="reveal"><img data-g="/img-xolo-coffee-s15.webp" alt=""><figcaption>the shelves</figcaption></figure>
+ </div>
+ <div class="vals"><div class="reveal"><b>Homemade</b><span>Syrups like pistachio, made in house.</span></div><div class="reveal"><b>Friendly crew</b><span>Mentioned in 76 reviews.</span></div><div class="reveal"><b>Chicano culture</b><span>Celebrated on every wall.</span></div></div>
+</section>
+
+<section>
+ <h2 class="h2 reveal">Word on <em>16th</em></h2>
+ <div class="revs">
+  <div class="rv reveal"><p>“This place is a vibe! Located in an unassuming strip mall, the inside features artwork and fabulous music selection. I got an iced pistachio espresso and a banana bread. It was fabulous!”</p><small>Google review · 4.8★ from 356</small></div>
+  <div class="rv reveal"><p>“Tried this place out for the first time this morning; It is such a cool vibe! We were immediately welcomed.”</p><small>Google review · 4.8★ from 356</small></div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <h2 class="h2 reveal">Pull <em>up</em></h2>
+ <div class="visit">
+  <div class="card reveal"><div class="hrs" id="hrs"></div>
+   <div class="li"><b>Address</b>2428 N 16th St, Suite C, Phoenix, AZ 85006</div>
+   <div class="li"><b>Phone</b><a href="tel:+14807212295">+1 480-721-2295</a></div>
+   <div class="ctas" style="margin-top:18px"><a class="btn" href="https://maps.google.com/?q=Xolo%20Coffee%202428%20N%2016th%20St%20Phoenix">Directions</a><a class="btn o" href="https://www.instagram.com/xolocoffee/">Instagram</a></div></div>
+  <div class="map reveal"><iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Xolo%20Coffee%202428%20N%2016th%20St%20Phoenix&output=embed"></iframe></div>
+ </div>
+</section>
+<footer><span>© Xolo Coffee · Phoenix, Arizona</span><span>Designed by Aditya Chaturvedi</span></footer>
+<div class="mbar"><a href="https://maps.google.com/?q=Xolo%20Coffee%202428%20N%2016th%20St%20Phoenix">Directions</a><a href="tel:+14807212295">Call</a></div>
+<script>
+document.querySelectorAll('[data-g]').forEach(function(e){e.src=e.dataset.g});
+var pt=document.getElementById('petals');for(var i=0;i<22;i++){var p=document.createElement('span');p.className='petal';p.style.left=Math.random()*100+'%';p.style.animationDuration=(7+Math.random()*7)+'s';p.style.animationDelay=(-Math.random()*12)+'s';p.style.transform='scale('+(.6+Math.random()*.8)+')';if(i%4===0)p.style.background='#ff7b00';pt.appendChild(p)}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+var H={0:[7,16],1:null,2:[7,15],3:[7,15],4:[7,15],5:[7,16],6:[7,16]},D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Phoenix'})),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,t='';
+[1,2,3,4,5,6,0].forEach(function(i){t+='<div'+(i===d?' class="td"':'')+'><span>'+D[i]+'</span><span>'+(H[i]?'7am – '+(H[i][1]-12)+'pm':'Closed')+'</span></div>'});document.getElementById('hrs').innerHTML=t;
+var st=document.getElementById('status');if(H[d]&&h>=7&&h<H[d][1]){st.classList.add('o');st.textContent='✿ Open now · until '+(H[d][1]-12)+'pm'}
+</script></body></html>
